@@ -7,9 +7,11 @@ interface DeptCardProps {
   state: DeptState;
   /** Vista de un solo rol: texto más grande. */
   focus?: boolean;
+  /** Contenido extra (micrófonos, personas en escena). */
+  children?: React.ReactNode;
 }
 
-export function DeptCard({ dept, state, focus }: DeptCardProps) {
+export function DeptCard({ dept, state, focus, children }: DeptCardProps) {
   const Icon = DEPT_ICON[dept.key];
   const action = state.kind === "action";
 
@@ -24,15 +26,18 @@ export function DeptCard({ dept, state, focus }: DeptCardProps) {
           {!action && !/^(mantener|sin cambio)/i.test(state.text) && <Tag className="bg-white/10 text-white/50">Mantener</Tag>}
         </span>
       </div>
+      {(state.text || !children) && (
       <p
-        className={cn(
-          "leading-snug text-balance",
-          focus ? "text-3xl lg:text-4xl" : "text-xl lg:text-2xl",
-          action ? "font-semibold text-white" : "text-white/45",
-        )}
-      >
-        {state.text || "Nada que hacer en este pie"}
-      </p>
+          className={cn(
+            "leading-snug text-balance",
+            focus ? "text-3xl lg:text-4xl" : "text-xl lg:text-2xl",
+            action ? "font-semibold text-white" : "text-white/45",
+          )}
+        >
+          {state.text || "Nada que hacer en este pie"}
+        </p>
+      )}
+      {children}
     </div>
   );
 }

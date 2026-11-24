@@ -1,4 +1,5 @@
 import data from "@/data/libreto.json";
+import escena from "@/data/escena.json";
 
 export type DeptKey = "sound" | "lights" | "stage" | "actors";
 
@@ -111,7 +112,11 @@ const HOLD = /^(mantener|sin cambio)/i;
 export function deptState(index: number, key: DeptKey): DeptState {
   const text = CUES[index][key];
   const prev = index > 0 ? CUES[index - 1][key] : null;
-  const hold = !text || HOLD.test(text) || (prev !== null && text === prev);
+  const textHold = !text || HOLD.test(text) || (prev !== null && text === prev);
+  // Sonido (micrófonos) y Actores también actúan si alguien entra o sale de escena.
+  const { enter, leave } = presence(index);
+  const castChange = (key === "sound" || key === "actors") && enter.length + leave.length > 0;
+  const hold = textHold && !castChange;
   return {
     kind: hold ? "hold" : "action",
     text,
@@ -178,3 +183,32 @@ export const ACTS: Act[] = CUES.reduce<Act[]>((acc, cue, i) => {
 export function actOf(cueIndex: number): Act {
   return ACTS.find((a) => cueIndex >= a.start && cueIndex <= a.end)!;
 }
+
+/* ---------- Personas en escena y micrófonos ---------- */
+
+const PRESENCE: string[][] = CUES.map((c) => (escena as Record<string, string[]>)[c.num] ?? []);
+
+/** Todas las personas/grupos en orden de aparición. */
+export const CAST: string[] = [...new Set(PRESENCE.flat())];
+
+export interface Presence {
+  /** Quiénes están en escena durante este pie. */
+  on: string[];
+  /** Entran en este pie (encender mic). */
+  enter: string[];
+  /** Salen en este pie (apagar mic). */
+  leave: string[];
+}
+
+export function presence(index: number): Presence {
+  const on = PRESENCE[index];
+  const before = index > 0 ? PRESENCE[index - 1] : [];
+  return {
+    on,
+    enter: on.filter((p) => !before.includes(p)),
+    leave: before.filter((p) => !on.includes(p)),
+  };
+}
+
+/** Número de micrófono por persona (lo anota el equipo en la app). */
+export type MicMap = Record<string, string>;

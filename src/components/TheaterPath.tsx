@@ -8,10 +8,15 @@ import {
   DEPTS,
   TITLE,
   deptState,
+  presence,
   sceneOf,
   type DeptKey,
+  type MicMap,
 } from "@/lib/libreto";
+import { useMics } from "@/lib/mics";
+import { CastLine, MicLine, micSummary } from "./Cast";
 import { DeptCard } from "./DeptCard";
+import { MicPanel } from "./MicPanel";
 import { SceneDrawer } from "./SceneDrawer";
 import { Timeline } from "./Timeline";
 import {
@@ -29,6 +34,8 @@ export function TheaterPath() {
   const [stored, setIndex] = usePersisted<number>("tp:index", 0);
   const [role, setRole] = usePersisted<Role>("tp:role", "all");
   const [drawer, setDrawer] = useState(false);
+  const [micOpen, setMicOpen] = useState(false);
+  const { mics, setMic, replaceAll } = useMics();
   const index = Math.min(
     Math.max(0, Number.isFinite(stored) ? stored : 0),
     LAST,
@@ -54,7 +61,9 @@ export function TheaterPath() {
   // Teclado y clickers de presentación (flechas / espacio / AvPág).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (drawer) return;
+      if (drawer || micOpen) return;
+      const t = e.target as HTMLElement | null;
+      if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
       if (
         ["ArrowRight", "ArrowDown", "PageDown", " ", "Enter"].includes(e.key)
       ) {
@@ -69,7 +78,7 @@ export function TheaterPath() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [goNext, goPrev, drawer]);
+  }, [goNext, goPrev, drawer, micOpen]);
 
   useWakeLock();
 
@@ -92,6 +101,7 @@ export function TheaterPath() {
   };
 
   const progress = ((index + 1) / CUES.length) * 100;
+  const cast = presence(index);
   const states = DEPTS.map((d) => ({ dept: d, state: deptState(index, d.key) }));
   // Con un rol elegido solo se ve su área; con "Todos", solo las que actúan.
   const shown = role === "all" ? states.filter((x) => x.state.kind === "action") : states.filter((x) => x.dept.key === role);
@@ -106,6 +116,9 @@ export function TheaterPath() {
           Pie {index + 1}/{CUES.length} · {Math.round(progress)}%
         </span>
         <div className="ml-auto flex items-center gap-2">
+          <button type="button" onClick={() => setMicOpen(true)} className={chip(false, "h-10")}>
+            🎤 Micrófonos
+          </button>
           <button type="button" onClick={() => setDrawer(true)} className={chip(false, "h-10")}>
             <ListIcon className="size-5" /> Libreto
           </button>
@@ -157,7 +170,12 @@ export function TheaterPath() {
             {shown.length > 0 ? (
               <div className={cn("grid min-h-0 grid-cols-1 content-start gap-3 overflow-y-auto", cols)}>
                 {shown.map(({ dept, state }) => (
-                  <DeptCard key={dept.key} dept={dept} state={state} focus={role !== "all"} />
+                  <DeptCard key={dept.key} dept={dept} state={state} focus={role !== "all"}>
+                    {dept.key === "actors" && <CastLine p={cast} mics={mics} />}
+                    {dept.key === "sound" && (cast.enter.length > 0 || cast.leave.length > 0) && (
+                      <MicLine p={cast} mics={mics} />
+                    )}
+                  </DeptCard>
                 ))}
               </div>
             ) : (
@@ -183,7 +201,7 @@ export function TheaterPath() {
         </section>
 
         <aside className="flex min-h-0 flex-col overflow-y-auto">
-          <UpNext index={index} role={role} sceneChanges={!!nextScene && nextScene.index !== scene.index} />
+          <UpNext index={index} role={role} mics={mics} sceneChanges={!!nextScene && nextScene.index !== scene.index} />
         </aside>
       </main>
 
@@ -224,6 +242,7 @@ export function TheaterPath() {
         </button>
       </footer>
 
+      <MicPanel open={micOpen} mics={mics} onChange={setMic} onReplace={replaceAll} onClose={() => setMicOpen(false)} />
       <SceneDrawer
         open={drawer}
         index={index}
@@ -238,10 +257,12 @@ export function TheaterPath() {
 function UpNext({
   index,
   role,
+  mics,
   sceneChanges,
 }: {
   index: number;
   role: Role;
+  mics: MicMap;
   sceneChanges: boolean;
 }) {
   if (index >= LAST) {
@@ -293,7 +314,7 @@ function UpNext({
           return (
             <li key={d.key} className="flex gap-2 text-sm">
               <Icon className={cn("mt-0.5 size-4 shrink-0", d.accent)} />
-              <span className="line-clamp-2 text-white/75">{s.text}</span>
+              <span className="line-clamp-2 text-white/75">{actionText(index + 1, d.key, mics)}</span>
             </li>
           );
         })}
@@ -306,7 +327,7 @@ function UpNext({
             {myNext === -1 ? dept.short : `Luego · pie ${CUES[myNext].num}`}
           </p>
           <p className="text-base font-semibold text-white">
-            {myNext === -1 ? "Ya no hay más acciones." : deptState(myNext, dept.key).text}
+            {myNext === -1 ? "Ya no hay más acciones." : actionText(myNext, dept.key, mics)}
           </p>
         </div>
       )}
@@ -368,4 +389,17 @@ function useWakeLock() {
       lock?.release().catch(() => {});
     };
   }, []);
+}
+
+/** Texto de la acción de un área, sumando cambios de micrófonos / elenco. */
+function actionText(i: number, key: DeptKey, mics: MicMap): string {
+  const text = deptState(i, key).text;
+  if (key !== "sound" && key !== "actors") return text;
+  if (key === "actors" && text) return text;
+  const p = presence(i);
+  const extra =
+    key === "sound"
+      ? micSummary(p, mics)
+      : [p.enter.length && `Entran: ${p.enter.join(", ")}`, p.leave.length && `Salen: ${p.leave.join(", ")}`].filter(Boolean).join(" · ");
+  return [text, extra].filter(Boolean).join(" · ");
 }
