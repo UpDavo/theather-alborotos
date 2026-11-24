@@ -7,7 +7,7 @@
       "block": "APERTURA",
       "cue": "Jefe de sala confirma: público listo",
       "sound": "",
-      "lights": "Luz completa de proscenio",
+      "lights": "Luz en podio",
       "stage": "Proscenio despejado; podio colocado",
       "actors": "Daniel preparado en lateral derecho"
     },
@@ -17,7 +17,7 @@
       "block": "APERTURA",
       "cue": "Daniel entra y toma el podio",
       "sound": "Micrófono de Daniel abierto",
-      "lights": "Mantener luz completa",
+      "lights": "Mantener luz en podio",
       "stage": "Podio en proscenio",
       "actors": "Daniel entra por la derecha"
     },
@@ -27,7 +27,7 @@
       "block": "ESCENA 1 · DANIEL Y KARIN",
       "cue": "Daniel termina la bienvenida",
       "sound": "",
-      "lights": "Mantener luz completa",
+      "lights": "Entra Karin: se prende todo (luz completa)",
       "stage": "Proscenio",
       "actors": "Karin entra por la izquierda"
     },
