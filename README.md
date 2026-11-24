@@ -7,8 +7,12 @@ qué deben hacer Sonido/Video, Luces, Escenario/Telón y Actores/Utilería.
 
 ```bash
 npm install
-npm run dev        # o: npm run build && npm start
+npm run dev        # o: npm run build && npm start  (sirve out/)
 ```
+
+## Deploy (Cloudflare Pages)
+
+Sitio estático (`output: "export"`): build `npm run build`, salida `out`, variable `NODE_VERSION=22`.
 
 Abrir en el iPad (misma Wi-Fi): `http://<IP-de-la-Mac>:3000`.
 En Safari: Compartir → "Agregar a pantalla de inicio" para verla a pantalla completa.

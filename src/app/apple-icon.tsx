@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+
+export const dynamic = "force-static";
 import { AppIcon } from "@/lib/app-icon";
 
 export const size = { width: 180, height: 180 };
