@@ -17,6 +17,7 @@ import { useMics, useNotes } from "@/lib/mics";
 import { CastLine, MicLine, micSummary } from "./Cast";
 import { DeptCard } from "./DeptCard";
 import { MicPanel } from "./MicPanel";
+import { NotesDrawer } from "./NotesDrawer";
 import { SceneDrawer } from "./SceneDrawer";
 import { Timeline } from "./Timeline";
 import {
@@ -35,16 +36,18 @@ export function TheaterPath() {
   const [role, setRole] = usePersisted<Role>("tp:role", "all");
   const [drawer, setDrawer] = useState(false);
   const [micOpen, setMicOpen] = useState(false);
+  const [notesOpen, setNotesOpen] = useState(false);
   const { mics, setMic, replaceAll } = useMics();
   const { notes, setNote, replaceNotes } = useNotes();
   const editMic = (name: string) => {
     const v = window.prompt(`Micrófono de ${name}:`, mics[name] ?? "");
     if (v !== null) setMic(name, v);
   };
-  const editNote = () => {
-    const v = window.prompt(`Nota para el pie ${cue.num}:`, notes[cue.num] ?? "");
-    if (v !== null) setNote(cue.num, v);
+  const editNote = (num: string = cue.num) => {
+    const v = window.prompt(`Nota para el pie ${num}:`, notes[num] ?? "");
+    if (v !== null) setNote(num, v);
   };
+  const noteCount = Object.keys(notes).length;
   const index = Math.min(
     Math.max(0, Number.isFinite(stored) ? stored : 0),
     LAST,
@@ -70,7 +73,7 @@ export function TheaterPath() {
   // Teclado y clickers de presentación (flechas / espacio / AvPág).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (drawer || micOpen) return;
+      if (drawer || micOpen || notesOpen) return;
       const t = e.target as HTMLElement | null;
       if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
       if (
@@ -87,7 +90,7 @@ export function TheaterPath() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [goNext, goPrev, drawer, micOpen]);
+  }, [goNext, goPrev, drawer, micOpen, notesOpen]);
 
   useWakeLock();
 
@@ -127,6 +130,12 @@ export function TheaterPath() {
         <div className="ml-auto flex items-center gap-2">
           <button type="button" onClick={() => setMicOpen(true)} className={chip(false, "h-10")}>
             🎤 Micrófonos
+          </button>
+          <button type="button" onClick={() => setNotesOpen(true)} className={chip(false, "h-10")}>
+            📝 Notas
+            {noteCount > 0 && (
+              <span className="rounded-full bg-yellow-300 px-1.5 text-xs font-bold text-neutral-900 tabular-nums">{noteCount}</span>
+            )}
           </button>
           <button type="button" onClick={() => setDrawer(true)} className={chip(false, "h-10")}>
             <ListIcon className="size-5" /> Libreto
@@ -178,7 +187,7 @@ export function TheaterPath() {
                 type="button"
                 onPointerDown={(e) => e.stopPropagation()}
                 onPointerUp={(e) => e.stopPropagation()}
-                onClick={editNote}
+                onClick={() => editNote()}
                 className={cn(
                   "mt-3 flex max-w-full items-start gap-2 rounded-2xl px-3 py-2 text-left text-base",
                   notes[cue.num] ? "bg-yellow-300 text-neutral-900" : "border border-dashed border-white/20 text-white/45",
@@ -265,6 +274,14 @@ export function TheaterPath() {
       </footer>
 
       <MicPanel open={micOpen} mics={mics} onChange={setMic} onReplace={replaceAll} notes={notes} onReplaceNotes={replaceNotes} onClose={() => setMicOpen(false)} />
+      <NotesDrawer
+        open={notesOpen}
+        index={index}
+        notes={notes}
+        onClose={() => setNotesOpen(false)}
+        onJump={go}
+        onEdit={editNote}
+      />
       <SceneDrawer
         open={drawer}
         index={index}

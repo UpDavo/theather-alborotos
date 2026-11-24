@@ -1183,26 +1183,6 @@
     },
     {
       "id": 118,
-      "num": "118",
-      "block": "ESCENA 20A · SACERDOTES (OPCIONAL)",
-      "cue": "Si se mantiene la escena de los seis sacerdotes",
-      "sound": "Fondo musical suave · POR CONFIRMAR",
-      "lights": "Cálida general",
-      "stage": "Mesa/sillas y seis panes",
-      "actors": "Los seis sacerdotes; Padre Jorge es Sacerdote 4"
-    },
-    {
-      "id": 119,
-      "num": "119",
-      "block": "ESCENA 20A · SACERDOTES (OPCIONAL)",
-      "cue": "Termina el chiste de los seis panes",
-      "sound": "Sting cómico / transición",
-      "lights": "Fade de salida",
-      "stage": "Retirar mesa, sillas y panes",
-      "actors": "Sacerdotes se preparan para concierto"
-    },
-    {
-      "id": 120,
       "num": "120",
       "block": "ESCENA 21 · LOS PADRECITOS",
       "cue": "Karin y Paulita toman el centro",
@@ -1212,7 +1192,7 @@
       "actors": "Karin y Paulita entran por la izquierda"
     },
     {
-      "id": 121,
+      "id": 119,
       "num": "121",
       "block": "ESCENA 21 · LOS PADRECITOS",
       "cue": "Karin: «¡Con ustedes, Los Padrecitos!»",
@@ -1222,7 +1202,7 @@
       "actors": "Karin y Paulita salen izquierda; Los Padrecitos ocupan escena"
     },
     {
-      "id": 122,
+      "id": 120,
       "num": "122",
       "block": "CONCIERTO · LOS PADRECITOS",
       "cue": "Director musical da entrada",
@@ -1232,7 +1212,7 @@
       "actors": "Los Padrecitos permanecen durante todo el concierto"
     },
     {
-      "id": 123,
+      "id": 121,
       "num": "123",
       "block": "CONCIERTO · LOS PADRECITOS",
       "cue": "Termina la última canción",
@@ -1242,7 +1222,7 @@
       "actors": "Cantantes y dobles se colocan en laterales"
     },
     {
-      "id": 124,
+      "id": 122,
       "num": "124",
       "block": "ESCENA 22 · DESPEDIDA",
       "cue": "Narrador: «Después de algún tiempo…»",
@@ -1252,7 +1232,7 @@
       "actors": "Personajes entran al ser nombrados y permanecen"
     },
     {
-      "id": 125,
+      "id": 123,
       "num": "125",
       "block": "ESCENA 22 · DESPEDIDA",
       "cue": "Narrador nombra a los guardias",
@@ -1262,7 +1242,7 @@
       "actors": "Toty y guardias entran"
     },
     {
-      "id": 126,
+      "id": 124,
       "num": "126",
       "block": "ESCENA 22 · DESPEDIDA",
       "cue": "Narrador nombra a All-Borotos y Chocolatito",
@@ -1272,7 +1252,7 @@
       "actors": "Cecilia y KD entran"
     },
     {
-      "id": 127,
+      "id": 125,
       "num": "127",
       "block": "ESCENA 22 · DESPEDIDA",
       "cue": "Narrador nombra a los ladrones reformados",
@@ -1282,7 +1262,7 @@
       "actors": "Pata Pata y Lucho entran y hacen gestos benéficos"
     },
     {
-      "id": 128,
+      "id": 126,
       "num": "128",
       "block": "ESCENA 22 · DESPEDIDA",
       "cue": "Narrador anuncia a Cynthia y «Pancita Rica»",
@@ -1292,7 +1272,7 @@
       "actors": "Cynthia y Lucho se muestran enamorados"
     },
     {
-      "id": 129,
+      "id": 127,
       "num": "129",
       "block": "ESCENA 22 · DESPEDIDA",
       "cue": "Narrador cuenta el cambio de Cizaña",
@@ -1302,7 +1282,7 @@
       "actors": "Angelitos y Cizaña con ropa de angelito"
     },
     {
-      "id": 130,
+      "id": 128,
       "num": "130",
       "block": "ESCENA 22 · DESPEDIDA",
       "cue": "Narrador recuerda a Galán y Paulita",
@@ -1312,7 +1292,7 @@
       "actors": "Galán y Paulita entran juntos"
     },
     {
-      "id": 131,
+      "id": 129,
       "num": "131",
       "block": "ESCENA 22 · DESPEDIDA",
       "cue": "Narrador: «Ahora Karin usa dos reglas»",
@@ -1322,7 +1302,7 @@
       "actors": "Karin entra con dos reglas"
     },
     {
-      "id": 132,
+      "id": 130,
       "num": "132",
       "block": "ESCENA 22 · DESPEDIDA",
       "cue": "Narrador anuncia el nuevo trabajo de Armando",
@@ -1332,7 +1312,7 @@
       "actors": "Armando entra con Daniel y producción"
     },
     {
-      "id": 133,
+      "id": 131,
       "num": "133",
       "block": "FINAL",
       "cue": "Elenco: «¡El show siempre debe continuar!»",
@@ -1342,7 +1322,7 @@
       "actors": "Todo el elenco; nadie sale"
     },
     {
-      "id": 134,
+      "id": 132,
       "num": "134",
       "block": "FINAL",
       "cue": "Termina el Tarimazo",
@@ -1352,7 +1332,7 @@
       "actors": "Saludo y venia de todo el elenco"
     },
     {
-      "id": 135,
+      "id": 133,
       "num": "135",
       "block": "FINAL",
       "cue": "Director de escena da cierre",
