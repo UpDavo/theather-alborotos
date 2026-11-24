@@ -1,0 +1,1365 @@
+{
+  "title": "ARMANDO ALL-BOROTOS · LIBRETO TÉCNICO",
+  "cues": [
+    {
+      "id": 0,
+      "num": "1",
+      "block": "APERTURA",
+      "cue": "Jefe de sala confirma: público listo",
+      "sound": "",
+      "lights": "Luz completa de proscenio",
+      "stage": "Proscenio despejado; podio colocado",
+      "actors": "Daniel preparado en lateral derecho"
+    },
+    {
+      "id": 1,
+      "num": "2",
+      "block": "APERTURA",
+      "cue": "Daniel entra y toma el podio",
+      "sound": "Micrófono de Daniel abierto",
+      "lights": "Mantener luz completa",
+      "stage": "Podio en proscenio",
+      "actors": "Daniel entra por la derecha"
+    },
+    {
+      "id": 2,
+      "num": "3",
+      "block": "ESCENA 1 · DANIEL Y KARIN",
+      "cue": "Daniel termina la bienvenida",
+      "sound": "",
+      "lights": "Mantener luz completa",
+      "stage": "Proscenio",
+      "actors": "Karin entra por la izquierda"
+    },
+    {
+      "id": 3,
+      "num": "4",
+      "block": "ESCENA 1 · DANIEL Y KARIN",
+      "cue": "Karin ordena: «¡Fuera!»",
+      "sound": "",
+      "lights": "Mantener",
+      "stage": "Proscenio",
+      "actors": "Daniel sale solo por la derecha; Karin permanece"
+    },
+    {
+      "id": 4,
+      "num": "5",
+      "block": "ESCENA 1A · GUARDIAS",
+      "cue": "Daniel reaparece: «Esto no se va a quedar así»",
+      "sound": "",
+      "lights": "Luz completa",
+      "stage": "Proscenio",
+      "actors": "Daniel vuelve; Paula y Karin en escena"
+    },
+    {
+      "id": 5,
+      "num": "6",
+      "block": "ESCENA 1A · GUARDIAS",
+      "cue": "Karin grita: «¡GUARDIAS!»",
+      "sound": "",
+      "lights": "Mantener",
+      "stage": "Proscenio",
+      "actors": "Luigi entra por la izquierda"
+    },
+    {
+      "id": 6,
+      "num": "7",
+      "block": "ESCENA 1A · GUARDIAS",
+      "cue": "El guardia carga a Daniel",
+      "sound": "Golpe/woosh corto al caer el zapato (opcional)",
+      "lights": "Mantener",
+      "stage": "Proscenio",
+      "actors": "Daniel y guardias salen por la derecha; Paula recoge el zapato"
+    },
+    {
+      "id": 7,
+      "num": "8",
+      "block": "ESCENA 1A · GUARDIAS",
+      "cue": "Karin se acomoda el saco y saluda al público",
+      "sound": "Micrófonos Karin y Paula",
+      "lights": "Frontal completo",
+      "stage": "Retirar podio si estorba",
+      "actors": "Karin y Paula al centro"
+    },
+    {
+      "id": 8,
+      "num": "9",
+      "block": "PRESENTACIÓN · CLASES DE ARTE",
+      "cue": "Paula hace la venia y presenta actuación",
+      "sound": "",
+      "lights": "Sube luz de escenario",
+      "stage": "Abrir telón; aparece la Escuela de Arte",
+      "actors": "Toty lista para entrar"
+    },
+    {
+      "id": 9,
+      "num": "10",
+      "block": "PRESENTACIÓN · ACTUACIÓN",
+      "cue": "Toty toma posición para actuar",
+      "sound": "Voz en off de Daniel",
+      "lights": "Spotlight sobre Toty; resto oscuro",
+      "stage": "Escenario escuela",
+      "actors": "Toty al centro"
+    },
+    {
+      "id": 10,
+      "num": "11",
+      "block": "PRESENTACIÓN · ACTUACIÓN",
+      "cue": "Daniel ordena cada cambio de emoción",
+      "sound": "Continuar voz en off",
+      "lights": "Apagar spot 8 s y reencender; repetir 3 veces",
+      "stage": "Sin cambio",
+      "actors": "Toty cambia de personaje"
+    },
+    {
+      "id": 11,
+      "num": "12",
+      "block": "PRESENTACIÓN · ACTUACIÓN",
+      "cue": "Termina la tercera emoción",
+      "sound": "Cerrar voz en off",
+      "lights": "Sube luz general",
+      "stage": "Escuela",
+      "actors": "Toty sale; Paula entra"
+    },
+    {
+      "id": 12,
+      "num": "13",
+      "block": "PRESENTACIÓN · CANTO MAFER",
+      "cue": "Paula: «Con ustedes, las clases de canto»",
+      "sound": "Cristian Castro · Azul · 00:23–01:30",
+      "lights": "Estrellas en movimiento",
+      "stage": "Escuela",
+      "actors": "Mafer entra tímida; micrófono al centro"
+    },
+    {
+      "id": 13,
+      "num": "14",
+      "block": "PRESENTACIÓN · CANTO MAFER",
+      "cue": "Termina la canción de Mafer",
+      "sound": "Corte/fade de pista",
+      "lights": "Blackout breve; luego general para Paula",
+      "stage": "Sin cambio",
+      "actors": "Mafer sale; Paula entra"
+    },
+    {
+      "id": 14,
+      "num": "15",
+      "block": "PRESENTACIÓN · CANTO SOFÍA",
+      "cue": "Paula presenta a Sofía Armes",
+      "sound": "I Will Survive",
+      "lights": "Blackout de entrada; estrellas en movimiento",
+      "stage": "Escuela",
+      "actors": "Sofía en el centro; micrófono listo"
+    },
+    {
+      "id": 15,
+      "num": "16",
+      "block": "PRESENTACIÓN · CANTO SOFÍA",
+      "cue": "Termina el canto de Sofía",
+      "sound": "Corte/fade de pista",
+      "lights": "Blackout breve; luego luz para Paula",
+      "stage": "Sin cambio",
+      "actors": "Sofía sale; Paula entra"
+    },
+    {
+      "id": 16,
+      "num": "17",
+      "block": "PRESENTACIÓN · CAPOEIRA",
+      "cue": "Paula: «Ahora presentamos Capoeira»",
+      "sound": "Pista Michael Jackso",
+      "lights": "Ambiente rojo + luces de piso + flashes",
+      "stage": "Humo al inicio",
+      "actors": "KD entra; despejar zona de movimiento"
+    },
+    {
+      "id": 17,
+      "num": "18",
+      "block": "PRESENTACIÓN · CAPOEIRA",
+      "cue": "Termina Capoeira",
+      "sound": "Corte/fade de pista",
+      "lights": "Blackout",
+      "stage": "Disipar humo y despejar",
+      "actors": "KD sale"
+    },
+    {
+      "id": 18,
+      "num": "19",
+      "block": "PRESENTACIÓN · BAILE CLÁSICO",
+      "cue": "Paula presenta a Vittoria",
+      "sound": "Pista de baile clásico",
+      "lights": "Ámbar bajo con frontales",
+      "stage": "Escenario despejado",
+      "actors": "Vittoria al centro"
+    },
+    {
+      "id": 19,
+      "num": "20",
+      "block": "PRESENTACIÓN · BAILE CLÁSICO",
+      "cue": "Termina el baile de Vittoria",
+      "sound": "Corte/fade de pista",
+      "lights": "Blackout breve",
+      "stage": "Preparar gimnasia",
+      "actors": "Vittoria sale"
+    },
+    {
+      "id": 20,
+      "num": "21",
+      "block": "PRESENTACIÓN · GIMNASIA",
+      "cue": "Entra Camila para gimnasia olímpica",
+      "sound": "Pista de gimnasia",
+      "lights": "Juego de luces de colores",
+      "stage": "Zona libre; colchoneta si se utiliza",
+      "actors": "Camila realiza piruetas"
+    },
+    {
+      "id": 21,
+      "num": "22",
+      "block": "PRESENTACIÓN · GIMNASIA",
+      "cue": "Termina la gimnasia",
+      "sound": "Corte/fade de pista",
+      "lights": "Blackout breve",
+      "stage": "Retirar colchoneta",
+      "actors": "Camila sale; Paula toma centro"
+    },
+    {
+      "id": 22,
+      "num": "23",
+      "block": "PRESENTACIÓN · BAILE ADULTAS",
+      "cue": "Paula: «Me disculpan un segundo, que aquí voy yo»",
+      "sound": "Time of My Life · 00:00–01:53 · fade out",
+      "lights": "Movimiento + estrellas en el piso",
+      "stage": "Escenario despejado",
+      "actors": "Paula y bailarinas adultas"
+    },
+    {
+      "id": 23,
+      "num": "24",
+      "block": "PRESENTACIÓN · HIP HOP NIÑAS",
+      "cue": "Termina el baile de las adultas",
+      "sound": "Pista hip hop niñas",
+      "lights": "Blackout de cambio; luego estrellas en movimiento",
+      "stage": "Escenario despejado",
+      "actors": "Salen adultas; entran niñas"
+    },
+    {
+      "id": 24,
+      "num": "25",
+      "block": "PRESENTACIÓN · CIERRE",
+      "cue": "Termina el hip hop",
+      "sound": "Corte/fade de pista",
+      "lights": "Luz general de escuela",
+      "stage": "Escuela activa",
+      "actors": "Todo el alumnado queda atrás ensayando"
+    },
+    {
+      "id": 25,
+      "num": "26",
+      "block": "PRESENTACIÓN · CIERRE",
+      "cue": "Paula: «Bienvenidos a Los Desafinados»",
+      "sound": "Aplausos del público",
+      "lights": "Mantener general",
+      "stage": "Cerrar telón cuando Karin lleve a Paula al proscenio",
+      "actors": "Karin conduce a Paula; alumnado despeja"
+    },
+    {
+      "id": 26,
+      "num": "27",
+      "block": "ESCENA 2 · EL ROBO",
+      "cue": "Telón termina de cerrar",
+      "sound": "",
+      "lights": "Luz completa de proscenio",
+      "stage": "Escuela oculta",
+      "actors": "Karin y Paula en proscenio"
+    },
+    {
+      "id": 27,
+      "num": "28",
+      "block": "ESCENA 2 · EL ROBO",
+      "cue": "Paula: «¡No hables huevada!»",
+      "sound": "Efecto Yuri: «OEEE»",
+      "lights": "Mantener",
+      "stage": "Sin cambio",
+      "actors": "Pausa para remate"
+    },
+    {
+      "id": 28,
+      "num": "29",
+      "block": "ESCENA 2 · EL ROBO",
+      "cue": "Karin: «La otra vez vino un inspector de policía»",
+      "sound": "Música/efecto de recuerdo",
+      "lights": "Bajar proscenio durante salida",
+      "stage": "Abrir telón lentamente; escuela ordenada",
+      "actors": "Karin y Paula salen por la izquierda, cuchicheando"
+    },
+    {
+      "id": 29,
+      "num": "30",
+      "block": "ESCENA 3 · ARMANDO EN LA ESCUELA",
+      "cue": "El telón queda abierto",
+      "sound": "Final de música de recuerdo",
+      "lights": "Azul/rojo de inspector; seguidores en estudiante y Armando",
+      "stage": "Fondo Escuela; estudiante con pupitre a la derecha",
+      "actors": "Armando entra por la derecha"
+    },
+    {
+      "id": 30,
+      "num": "31",
+      "block": "ESCENA 3 · ARMANDO EN LA ESCUELA",
+      "cue": "Armando quita los audífonos al estudiante",
+      "sound": "Audio de audífonos se corta",
+      "lights": "Mantener seguidores",
+      "stage": "Sin cambio",
+      "actors": "Armando y Estudiante 1"
+    },
+    {
+      "id": 31,
+      "num": "32",
+      "block": "ESCENA 3 · ARMANDO EN LA ESCUELA",
+      "cue": "Suena el timbre de clases",
+      "sound": "Timbre escolar",
+      "lights": "Sube luz ambiente general",
+      "stage": "Escuela",
+      "actors": "Estudiante 1 sale por la derecha y los demás alumnos también"
+    },
+    {
+      "id": 32,
+      "num": "33",
+      "block": "ESCENA 3 · ARMANDO EN LA ESCUELA",
+      "cue": "Armando llega al escritorio de la directora",
+      "sound": "",
+      "lights": "General",
+      "stage": "Escritorio y silla al lado izquierdo",
+      "actors": "Karin aparece/entra por la izquierda"
+    },
+    {
+      "id": 33,
+      "num": "34",
+      "block": "ESCENA 3 · ARMANDO EN LA ESCUELA",
+      "cue": "Armando casi dice: «les patea el cu…»",
+      "sound": "Efecto Yuri: «OOOOOOE»",
+      "lights": "Mantener",
+      "stage": "Sin cambio",
+      "actors": "Pausa para remate"
+    },
+    {
+      "id": 34,
+      "num": "35",
+      "block": "ESCENA 3 · ARMANDO EN LA ESCUELA",
+      "cue": "Armando marca a Cecilia",
+      "sound": "Tono de llamada · 7 repeticiones",
+      "lights": "General",
+      "stage": "Sin cambio",
+      "actors": "Karin espera; Armando con celular"
+    },
+    {
+      "id": 35,
+      "num": "36",
+      "block": "ESCENA 3 · ARMANDO EN LA ESCUELA",
+      "cue": "Karin anuncia el viaje y se retira",
+      "sound": "",
+      "lights": "Baja escenario; mantiene proscenio",
+      "stage": "Cerrar telón; bajar ciclorama con imagen de hospital",
+      "actors": "Karin sale por la derecha; Armando pasa al proscenio"
+    },
+    {
+      "id": 36,
+      "num": "37",
+      "block": "ESCENA 3 · ARMANDO EN LA ESCUELA",
+      "cue": "Armando: «Cynthia es mi aliada»",
+      "sound": "",
+      "lights": "Seguidor o frontal sobre Armando",
+      "stage": "Telón cerrado / hospital preparado",
+      "actors": "Armando solo con celular"
+    },
+    {
+      "id": 37,
+      "num": "38",
+      "block": "ESCENA 4 · HOSPITAL",
+      "cue": "Cecilia contesta: «Aló»",
+      "sound": "Voz de Cecilia / efecto de llamada",
+      "lights": "Luz de proscenio",
+      "stage": "Fondo o proyección Hospital general",
+      "actors": "Armando en escena; Cecilia fuera"
+    },
+    {
+      "id": 38,
+      "num": "39",
+      "block": "ESCENA 4 · HOSPITAL",
+      "cue": "Cecilia: «Lo espero abajo»",
+      "sound": "Sonido de correr gracioso (opcional)",
+      "lights": "Seguidor acompaña carrera",
+      "stage": "Fondo o proyección Hospital adentro",
+      "actors": "Armando corre hacia la izquierda; Cecilia entra por ese lado"
+    },
+    {
+      "id": 39,
+      "num": "40",
+      "block": "ESCENA 4 · HOSPITAL",
+      "cue": "Cecilia: «Míralo, ahí viene»",
+      "sound": "Entra KD con Toty a escena lleno de vendas",
+      "lights": "General de hospital",
+      "stage": "Cruce completo",
+      "actors": "KD y enfermera Toty entran derecha y salen izquierda"
+    },
+    {
+      "id": 40,
+      "num": "41",
+      "block": "ESCENA 4 · HOSPITAL",
+      "cue": "Cecilia empieza: «Todo pasó un día…»",
+      "sound": "Efecto «Érase una vez»",
+      "lights": "Blackout",
+      "stage": "Abrir telón a Recámara (escenario 3)",
+      "actors": "Armando y Cecilia salen por la izquierda para cambiarse"
+    },
+    {
+      "id": 41,
+      "num": "42",
+      "block": "ESCENA 5 · TIGRESA DE BENGALA",
+      "cue": "Aparece KD planchando",
+      "sound": "Una vez que KD agarre la plancha, 5 segundos y suena Birbirbambam · 00:40",
+      "lights": "Ámbar de habitación",
+      "stage": "Recámara; cama + tabla + plancha + ropa + delantal + colgador",
+      "actors": "KD ya en escena"
+    },
+    {
+      "id": 42,
+      "num": "43",
+      "block": "ESCENA 5 · TIGRESA DE BENGALA",
+      "cue": "Cecilia entra: «¿Cómo estás, chocolatito?»",
+      "sound": "Fade de música doméstica",
+      "lights": "Mantener ámbar",
+      "stage": "Recámara",
+      "actors": "Cecilia entra por la izquierda"
+    },
+    {
+      "id": 43,
+      "num": "44",
+      "block": "ESCENA 5 · TIGRESA DE BENGALA",
+      "cue": "Cecilia va al baño: «Prepárate para el espectáculo»",
+      "sound": "",
+      "lights": "Bajar a ambiente coqueto",
+      "stage": "Recámara",
+      "actors": "Cecilia sale momentáneamente"
+    },
+    {
+      "id": 44,
+      "num": "45",
+      "block": "ESCENA 5 · TIGRESA DE BENGALA",
+      "cue": "Cecilia aparece: «Soy la Tigresa de Bengala»",
+      "sound": "Rugido de tigre",
+      "lights": "Golpe de luz / spot a Cecilia",
+      "stage": "Recámara",
+      "actors": "Cecilia con disfraz"
+    },
+    {
+      "id": 45,
+      "num": "46",
+      "block": "ESCENA 5 · TIGRESA DE BENGALA",
+      "cue": "Cecilia empieza a acercarse a KD",
+      "sound": "Caminata graciosa",
+      "lights": "Mantener; preparar flashes",
+      "stage": "Recámara",
+      "actors": "KD se protege"
+    },
+    {
+      "id": 46,
+      "num": "47",
+      "block": "ESCENA 5 · TIGRESA DE BENGALA",
+      "cue": "Cecilia: «El salto de la tigresa voladora»",
+      "sound": "Carrera graciosa + vuelo/woosh",
+      "lights": "Subir tensión con flashes",
+      "stage": "Cama preparada para caída segura",
+      "actors": "Cecilia corre hacia KD"
+    },
+    {
+      "id": 47,
+      "num": "48",
+      "block": "ESCENA 5 · TIGRESA DE BENGALA",
+      "cue": "KD grita: «¡Nooooo!»",
+      "sound": "Caída sobre madera/cama destrozada + rugido",
+      "lights": "Flashes/titilantes al impacto, serpentina dorada",
+      "stage": "Cama colapsa o efecto pactado",
+      "actors": "Cecilia cae sobre KD"
+    },
+    {
+      "id": 48,
+      "num": "49",
+      "block": "ESCENA 5 · TIGRESA DE BENGALA",
+      "cue": "Termina el impacto",
+      "sound": "Efecto se corta",
+      "lights": "Blackout",
+      "stage": "Bajar telón; desmontar recámara y preparar escuela nuevamente",
+      "actors": "KD y Cecilia ocultos tras telón"
+    },
+    {
+      "id": 49,
+      "num": "50",
+      "block": "ESCENA 6 · VOCES EN OFF",
+      "cue": "Telón queda cerrado",
+      "sound": "Voces grabadas de Armando y Cecilia “150 libras”",
+      "lights": "Oscuro / luz mínima de transición",
+      "stage": "Proscenio vacío",
+      "actors": "Sin actores visibles"
+    },
+    {
+      "id": 50,
+      "num": "51",
+      "block": "ESCENA 6 · VOCES EN OFF",
+      "cue": "Armando: «Te espero mañana en mi oficina»",
+      "sound": "Finalizar audio",
+      "lights": "Blackout",
+      "stage": "Preparar proyección",
+      "actors": ""
+    },
+    {
+      "id": 51,
+      "num": "52",
+      "block": "VIDEO · NOTICIERO",
+      "cue": "Blackout completo",
+      "sound": "Video Noticiero Teleportazos · 01:00",
+      "lights": "Sala y escenario oscuros",
+      "stage": "Pantalla/ciclorama visible",
+      "actors": "Armando listo a la derecha"
+    },
+    {
+      "id": 52,
+      "num": "53",
+      "block": "ESCENA 7 · CONCIENCIA",
+      "cue": "Termina el noticiero",
+      "sound": "Entrada Inspector Gadget hasta que empieza hablar NOONONO",
+      "lights": "Seguidor sobre Armando",
+      "stage": "Proscenio",
+      "actors": "Armando entra por la derecha"
+    },
+    {
+      "id": 53,
+      "num": "54",
+      "block": "ESCENA 7 · CONCIENCIA",
+      "cue": "Aguafiestas llama: «Armandito»",
+      "sound": "Sonido de hadas cuando Armando dice “no es que quiera borrar el pecado”",
+      "lights": "Azul/blanco de angelitos",
+      "stage": "Proscenio",
+      "actors": "Aguafiestas y Aguafresca entran por la izquierda"
+    },
+    {
+      "id": 54,
+      "num": "55",
+      "block": "ESCENA 7 · CONCIENCIA",
+      "cue": "Entra Cizaña/Sabel",
+      "sound": "BOMBA · movimiento de entrada cuando angelito dice “porque si tú lo haces”",
+      "lights": "Ambiente rojo",
+      "stage": "Proscenio",
+      "actors": "Sabel entra por la izquierda"
+    },
+    {
+      "id": 55,
+      "num": "56",
+      "block": "ESCENA 7 · CONCIENCIA",
+      "cue": "Angelitos y diablito jalan a Armando",
+      "sound": "",
+      "lights": "Dividir azul/blanco y rojo",
+      "stage": "Proscenio",
+      "actors": "Todos rodean a Armando"
+    },
+    {
+      "id": 56,
+      "num": "57",
+      "block": "ESCENA 7 · CONCIENCIA",
+      "cue": "Armando: «Se acabó»",
+      "sound": "",
+      "lights": "Mantener",
+      "stage": "Proscenio",
+      "actors": "Armando sale furioso por la derecha y empuja a Sabel"
+    },
+    {
+      "id": 57,
+      "num": "58",
+      "block": "ESCENA 7 · CONCIENCIA",
+      "cue": "Aguafiestas ve el cheque: «¡Qué hijue…!»",
+      "sound": "Efecto Yuri: «OEEE»",
+      "lights": "Blackout inmediato al remate",
+      "stage": "Preparar escuela",
+      "actors": "Angelitos y Cizaña quedan al centro"
+    },
+    {
+      "id": 58,
+      "num": "59",
+      "block": "ESCENA 8 · ESCUELA",
+      "cue": "Termina el blackout",
+      "sound": "Empieza con canción española",
+      "lights": "Colores + estrellas en movimiento",
+      "stage": "Abrir telón; Fondo Escuela; trofeo al lado izquierdo",
+      "actors": "Alumnos"
+    },
+    {
+      "id": 59,
+      "num": "60",
+      "block": "ESCENA 8 · ESCUELA",
+      "cue": "Suena el «olé» y la campana",
+      "sound": "Olé + timbre de clases",
+      "lights": "Luz general de escenario",
+      "stage": "Escuela",
+      "actors": "Cynthia entra por la izquierda"
+    },
+    {
+      "id": 60,
+      "num": "61",
+      "block": "ESCENA 8 · CYNTHIA",
+      "cue": "Cynthia: «¡Cada uno a su clase!»",
+      "sound": "",
+      "lights": "General",
+      "stage": "Escuela",
+      "actors": "Corre a los alumnos y ellos se van al otro lado por atrás a prepararse para su escena"
+    },
+    {
+      "id": 61,
+      "num": "62",
+      "block": "ESCENA 8 · CYNTHIA",
+      "cue": "Cynthia mira discretamente el trofeo",
+      "sound": "",
+      "lights": "Acento sobre Cynthia y trofeo",
+      "stage": "Trofeo visible a la izquierda",
+      "actors": "Cynthia sola al frente"
+    },
+    {
+      "id": 62,
+      "num": "63",
+      "block": "ESCENA 8 · CYNTHIA",
+      "cue": "Cynthia termina: «Yo solo digo»",
+      "sound": "Timbre de clases de nuevo",
+      "lights": "Regresa general",
+      "stage": "Escuela",
+      "actors": "Cynthia sale por la izquierda y al salir el timbre, entran alumnos preparados para su escena"
+    },
+    {
+      "id": 63,
+      "num": "64",
+      "block": "ESCENA 8 · PAULA Y GALÁN",
+      "cue": "Galán queda solo en el aula",
+      "sound": "My Way · a capela · 00:15",
+      "lights": "Seguidor sobre Galán",
+      "stage": "Escuela",
+      "actors": "Paula entra por la izquierda"
+    },
+    {
+      "id": 64,
+      "num": "65",
+      "block": "ESCENA 8 · PAULA Y GALÁN",
+      "cue": "Galán: «Usted me provoca»",
+      "sound": "Provócame · Chayanne · 00:53–01:22",
+      "lights": "Estrellas + colores",
+      "stage": "Escuela",
+      "actors": "Galán canta; bailarinas detrás"
+    },
+    {
+      "id": 65,
+      "num": "66",
+      "block": "ESCENA 8 · PAULA Y GALÁN",
+      "cue": "Termina «Provócame»",
+      "sound": "Corte de pista. Paulita habla con público.",
+      "lights": "General de aula",
+      "stage": "Escuela",
+      "actors": "Bailarinas despejan"
+    },
+    {
+      "id": 66,
+      "num": "67",
+      "block": "ESCENA 8 · INTERRUPCIÓN",
+      "cue": "Cynthia: «Buenas, buenasss»",
+      "sound": "",
+      "lights": "General",
+      "stage": "Escuela",
+      "actors": "Cynthia reentra por la izquierda"
+    },
+    {
+      "id": 67,
+      "num": "67b",
+      "block": "ESCENA 8 · INTERRUPCIÓN",
+      "cue": "«Solo estamos ensayando»",
+      "sound": "Galán y amiga cantan a capella",
+      "lights": "Cenital sobre chicos mientras cantan",
+      "stage": "Escuela",
+      "actors": "Se regresa la amiga atrás de telón y se despide de Paula y quedan solo los 2 cuando Cynthia se va sospechando"
+    },
+    {
+      "id": 68,
+      "num": "68",
+      "block": "ESCENA 8 · INTERRUPCIÓN",
+      "cue": "Cynthia: «Así los quería ver, ajá»",
+      "sound": "",
+      "lights": "Mantener",
+      "stage": "Escuela",
+      "actors": "Cynthia cruza y sale victoriosa por la derecha"
+    },
+    {
+      "id": 69,
+      "num": "69",
+      "block": "ESCENA 8 · PAULA Y GALÁN",
+      "cue": "Galán: «Usted es mi sol»",
+      "sound": "O Sole Mio · a capela",
+      "lights": "Rojo romántico + seguidor a la pareja",
+      "stage": "Escuela",
+      "actors": "Paula y Galán"
+    },
+    {
+      "id": 70,
+      "num": "70",
+      "block": "ESCENA 8 · PAULA Y GALÁN",
+      "cue": "Paula: «Vamos a tomar aire fresco»",
+      "sound": "",
+      "lights": "Fade a blackout",
+      "stage": "Cerrar telón / despejar escuela",
+      "actors": "Paula toma a Galán; ambos salen por la izquierda"
+    },
+    {
+      "id": 71,
+      "num": "71",
+      "block": "ESCENA 9 · PLAN DEL ROBO",
+      "cue": "Telón queda cerrado",
+      "sound": "",
+      "lights": "Pantalla/ciclorama visible",
+      "stage": "Fondo o proyección Parque de día",
+      "actors": "Armando entra por izquierda; Lucho entra derecha, ya está el banquito a la izquierda y el colgador de sombrero a la derecha"
+    },
+    {
+      "id": 72,
+      "num": "72",
+      "block": "ESCENA 9 · PLAN DEL ROBO",
+      "cue": "Armando y Lucho comienzan a hablar",
+      "sound": "",
+      "lights": "Luz en Armando y Lucho",
+      "stage": "Proscenio",
+      "actors": "Cynthia espera poco visible al fondo izquierdo"
+    },
+    {
+      "id": 73,
+      "num": "73",
+      "block": "ESCENA 9 · PLAN DEL ROBO",
+      "cue": "Armando: «Mientras yo controle la investigación…»",
+      "sound": "",
+      "lights": "Encender todo el proscenio",
+      "stage": "Proscenio",
+      "actors": "Armando presenta a Cinthya de lejos, se revela a Cynthia haciendo mímicas"
+    },
+    {
+      "id": 74,
+      "num": "74",
+      "block": "ESCENA 9 · PLAN DEL ROBO",
+      "cue": "Armando presenta a Cynthia: «Los dejo»",
+      "sound": "",
+      "lights": "Mantener",
+      "stage": "Proscenio",
+      "actors": "Armando sale por la derecha; Cynthia se acerca a Lucho"
+    },
+    {
+      "id": 75,
+      "num": "75",
+      "block": "ESCENA 11A · COQUETEO",
+      "cue": "Lucho: «Concédame este baile»",
+      "sound": "Llorarás · 00:00–00:45",
+      "lights": "Movimiento de colores",
+      "stage": "Proscenio despejado",
+      "actors": "Cynthia y Lucho bailan salsa"
+    },
+    {
+      "id": 76,
+      "num": "76",
+      "block": "ESCENA 11A · COQUETEO",
+      "cue": "Termina la salsa",
+      "sound": "Corte de pista + sonido de novela romántica",
+      "lights": "Pantalla/ciclorama visible",
+      "stage": "Fondo o proyección Parque de noche",
+      "actors": "Tres despedidas; Cynthia sale por la izquierda"
+    },
+    {
+      "id": 77,
+      "num": "77",
+      "block": "ESCENA 11A · COQUETEO",
+      "cue": "Lucho se seca el sudor y anuncia la reunión",
+      "sound": "",
+      "lights": "Fade a blackout",
+      "stage": "Fondo o proyección Parque de noche",
+      "actors": "Lucho sale por la derecha"
+    },
+    {
+      "id": 78,
+      "num": "78",
+      "block": "ESCENA 12 · REUNIÓN LADRONES",
+      "cue": "Termina el blackout",
+      "sound": "",
+      "lights": "General baja + medio foco fucsia para Pata Pata",
+      "stage": "Ciclorama proyección de garaje de ladrones; Pata Pata y Mudo sentados a la izquierda en el banquito",
+      "actors": "Lucho entra para la reunión; libreta, linterna, armas y pasamontañas, silla a la derecha"
+    },
+    {
+      "id": 79,
+      "num": "79",
+      "block": "ESCENA 12 · REUNIÓN LADRONES",
+      "cue": "Lucho dice: «Esto es para morirse»",
+      "sound": "Sonido de tensión psyco cuando ladrón amenaza con arma",
+      "lights": "Acento sobre Ladrón Mudo",
+      "stage": "Ciclorama proyección de garaje de ladrones",
+      "actors": "Mudo saca la pistola; Lucho y Pata Pata lo calman"
+    },
+    {
+      "id": 80,
+      "num": "80",
+      "block": "ESCENA 12 · REUNIÓN LADRONES",
+      "cue": "Mudo se toma la barriga y termina en gas",
+      "sound": "Sonido de pedo",
+      "lights": "General",
+      "stage": "Ciclorama proyección de garaje de ladrones",
+      "actors": "Remate de gastritis"
+    },
+    {
+      "id": 81,
+      "num": "81",
+      "block": "ESCENA 12 · REUNIÓN LADRONES",
+      "cue": "Lucho vuelve a decir: «Puede morirse»",
+      "sound": "Sonido de tensión psyco cuando ladrón amenaza con arma",
+      "lights": "Acento sobre Mudo",
+      "stage": "Ciclorama proyección de garaje de ladrones",
+      "actors": "Mudo vuelve a apuntar; lo calman"
+    },
+    {
+      "id": 82,
+      "num": "82",
+      "block": "ESCENA 12 · REUNIÓN LADRONES",
+      "cue": "Pata Pata pide viáticos",
+      "sound": "",
+      "lights": "General",
+      "stage": "Ciclorama proyección de garaje de ladrones",
+      "actors": "Lucho entrega dinero"
+    },
+    {
+      "id": 83,
+      "num": "83",
+      "block": "ESCENA 12 · REUNIÓN LADRONES",
+      "cue": "Pata Pata: «Vamos por el sánduche»",
+      "sound": "",
+      "lights": "Bajar luz de transición",
+      "stage": "Levantar ciclorama; revelar Escenario 2",
+      "actors": "Pata Pata y Mudo salen izquierda; Lucho sale derecha"
+    },
+    {
+      "id": 84,
+      "num": "84",
+      "block": "ESCENA 13 · ROBO DEL TROFEO",
+      "cue": "Inicia llamada Armando–Lucho",
+      "sound": "Voces en off / efecto de teléfono",
+      "lights": "Escena en penumbra",
+      "stage": "Escenario 2: aula vacía con trofeo, lámpara derecha, mesa en medio y cortina izquierda",
+      "actors": "Tres ladrones listos para entrar"
+    },
+    {
+      "id": 85,
+      "num": "85",
+      "block": "ESCENA 13 · ROBO DEL TROFEO",
+      "cue": "Lucho: «Si le contara…»",
+      "sound": "Efecto de recuerdo + Pantera Rosa · 00:00–01:16",
+      "lights": "Luz de sigilo",
+      "stage": "Escenario 2: aula vacía con trofeo, lámpara derecha, mesa en medio y cortina izquierda",
+      "actors": "Los tres ladrones entran en fila"
+    },
+    {
+      "id": 86,
+      "num": "86",
+      "block": "ESCENA 13 · ROBO DEL TROFEO",
+      "cue": "Los tres chocan y caen",
+      "sound": "Mantener Pantera Rosa",
+      "lights": "Mantener sigilo",
+      "stage": "Escenario 2: aula vacía con trofeo, lámpara derecha, mesa en medio y cortina izquierda",
+      "actors": "Ladrones se levantan y hacen mímica"
+    },
+    {
+      "id": 87,
+      "num": "87",
+      "block": "ESCENA 13 · ROBO DEL TROFEO",
+      "cue": "Lucho intenta tomar el trofeo y cuando está cerca",
+      "sound": "",
+      "lights": "Acento sobre el trofeo",
+      "stage": "Escenario 2: aula vacía con trofeo, lámpara derecha, mesa en medio y cortina izquierda",
+      "actors": "Los tres admiran el trofeo"
+    },
+    {
+      "id": 88,
+      "num": "88",
+      "block": "ESCENA 13 · ROBO DEL TROFEO",
+      "cue": "Se escucha un ruido y los ladrones se esconden",
+      "sound": "Golpe/alerta corto; bajar música",
+      "lights": "Bajar intensidad",
+      "stage": "Lámpara, mesa y cortina disponibles",
+      "actors": "Cada ladrón se esconde"
+    },
+    {
+      "id": 89,
+      "num": "89",
+      "block": "ESCENA 13 · ROBO DEL TROFEO",
+      "cue": "Toty: «Escuché algo»",
+      "sound": "Música en segundo plano o pausa",
+      "lights": "Luz general sobre guardia",
+      "stage": "Aula",
+      "actors": "Toty entra por la izquierda"
+    },
+    {
+      "id": 90,
+      "num": "90",
+      "block": "ESCENA 13 · ROBO DEL TROFEO",
+      "cue": "El Ladrón Mudo se tira un gas",
+      "sound": "Sonido de pedo cuando alza la pierna 5 segundos",
+      "lights": "General",
+      "stage": "Aula",
+      "actors": "Toty reacciona y sale por la izquierda"
+    },
+    {
+      "id": 91,
+      "num": "91",
+      "block": "ESCENA 13 · ROBO DEL TROFEO",
+      "cue": "La guardia abandona el lugar",
+      "sound": "",
+      "lights": "Fade a blackout",
+      "stage": "Aula queda vacía y sin trofeo",
+      "actors": "Los tres ladrones salen por la derecha con el trofeo"
+    },
+    {
+      "id": 92,
+      "num": "92",
+      "block": "ESCENA 14 · VENTA",
+      "cue": "Armando voz en off: «¿Ya tienen el dinero?»",
+      "sound": "Voz en off / llamada",
+      "lights": "Luz de proscenio",
+      "stage": "Proscenio",
+      "actors": "Lucho al centro; Pata Pata y Cynthia según marcación"
+    },
+    {
+      "id": 93,
+      "num": "93",
+      "block": "ESCENA 14 · VENTA",
+      "cue": "Lucho: «En el mercado negro»",
+      "sound": "Pausa para remate",
+      "lights": "Mantener",
+      "stage": "Proscenio",
+      "actors": "Lucho"
+    },
+    {
+      "id": 94,
+      "num": "94",
+      "block": "ESCENA 14 · VENTA",
+      "cue": "Lucho: «No, en Esmeraldas»",
+      "sound": "Rimshot/«ba-dum-tss» (opcional)",
+      "lights": "Blackout",
+      "stage": "Dejar escenario vacío para video",
+      "actors": "Lucho y Pata Pata salen derecha; Cynthia sale izquierda"
+    },
+    {
+      "id": 95,
+      "num": "95",
+      "block": "ESCENA 15 · VIDEO CELEBRACIÓN",
+      "cue": "Blackout completo",
+      "sound": "Video ladrones en piscina · 01:30",
+      "lights": "Escenario y sala oscuros",
+      "stage": "Pantalla/ciclorama",
+      "actors": "Cecilia y banda listos para captura"
+    },
+    {
+      "id": 96,
+      "num": "96",
+      "block": "ESCENA 15 · VIDEO CELEBRACIÓN",
+      "cue": "Video: «¿Pensaron que saldrían con la suya?»",
+      "sound": "Sirenas · 00:07 y continúan en transición",
+      "lights": "Rojo/azul de policía",
+      "stage": "Proscenio despejado",
+      "actors": "Preparar entradas laterales"
+    },
+    {
+      "id": 97,
+      "num": "97",
+      "block": "ESCENA 16 · CAPTURA",
+      "cue": "Cecilia entra preguntando por los ladrones",
+      "sound": "Sirenas bajas",
+      "lights": "Policía + seguidor móvil",
+      "stage": "Todo ocurre en proscenio y pasillos del público",
+      "actors": "Cecilia entra izquierda; guardias acompañan"
+    },
+    {
+      "id": 98,
+      "num": "98",
+      "block": "ESCENA 16 · CAPTURA",
+      "cue": "Cecilia: «¡Que alguien me ilumine!»",
+      "sound": "Golpe de iluminación (opcional)",
+      "lights": "Spot blanco inmediato sobre Cecilia y zona de entrada",
+      "stage": "Proscenio",
+      "actors": "Armando, Cynthia, Lucho y Pata Pata listos"
+    },
+    {
+      "id": 99,
+      "num": "99",
+      "block": "ESCENA 16 · CAPTURA",
+      "cue": "Entran los ladrones celebrando",
+      "sound": "Yakety Sax / Benny Hill · aprox. 00:30",
+      "lights": "Bright chase / movimiento cómico",
+      "stage": "Proscenio y cruces",
+      "actors": "Persecución de Armando, Cynthia, Lucho y Pata Pata"
+    },
+    {
+      "id": 100,
+      "num": "100",
+      "block": "ESCENA 16 · CAPTURA",
+      "cue": "La música se detiene bruscamente",
+      "sound": "Corte seco de Yakety Sax",
+      "lights": "Luz general fija",
+      "stage": "Todos congelados",
+      "actors": "Cecilia apunta a la banda"
+    },
+    {
+      "id": 101,
+      "num": "101",
+      "block": "ESCENA 16 · CAPTURA",
+      "cue": "Cecilia ordena a Pata Pata levantar las manos",
+      "sound": "",
+      "lights": "Medio foco fucsia sobre Pata Pata",
+      "stage": "Proscenio",
+      "actors": "Pata Pata realiza el gag de la cojera"
+    },
+    {
+      "id": 102,
+      "num": "102",
+      "block": "ESCENA 16 · CAPTURA",
+      "cue": "Cecilia: «Soy la Tigresa de Bengala»",
+      "sound": "Rugido de tigre",
+      "lights": "Acento sobre Cecilia",
+      "stage": "Proscenio",
+      "actors": "Cecilia hace gesto de tigresa"
+    },
+    {
+      "id": 103,
+      "num": "103",
+      "block": "ESCENA 16 · CAPTURA",
+      "cue": "Cecilia coloca las esposas a Armando",
+      "sound": "Cierre metálico de esposas",
+      "lights": "Rojo/azul de policía",
+      "stage": "Proscenio",
+      "actors": "Utilería: esposas"
+    },
+    {
+      "id": 104,
+      "num": "104",
+      "block": "ESCENA 16 · CAPTURA",
+      "cue": "Cecilia: «Queda usted detenido»",
+      "sound": "Sirena corta de salida",
+      "lights": "Blackout",
+      "stage": "Escuela debe quedar lista detrás del telón",
+      "actors": "Todos quedan escoltados durante el oscuro"
+    },
+    {
+      "id": 105,
+      "num": "105",
+      "block": "ESCENA 17 · KARIN Y PADRE JORGE",
+      "cue": "Sube la luz después de la captura",
+      "sound": "",
+      "lights": "Luz cálida de proscenio",
+      "stage": "Proscenio; escuela en paz detrás",
+      "actors": "Karin y Padre Jorge entran por la izquierda"
+    },
+    {
+      "id": 106,
+      "num": "106",
+      "block": "ESCENA 17 · KARIN Y PADRE JORGE",
+      "cue": "Padre: «Curiosidad y chisme, pecado doble»",
+      "sound": "Sting cómico corto (opcional)",
+      "lights": "Fade de salida",
+      "stage": "Proscenio",
+      "actors": "Salen los dos por la izquierda, cuchicheando"
+    },
+    {
+      "id": 107,
+      "num": "107",
+      "block": "ESCENA 18 · VIDEO CÁRCEL",
+      "cue": "Karin y Padre Jorge terminan de salir",
+      "sound": "Video Cárcel · incluir puerta/celda cerrándose",
+      "lights": "Escenario y sala oscuros",
+      "stage": "Pantalla/ciclorama",
+      "actors": "Video: Armando, Cynthia, Lucho, Pata Pata, Cecilia"
+    },
+    {
+      "id": 108,
+      "num": "108",
+      "block": "ESCENA 18 · VIDEO CÁRCEL",
+      "cue": "Termina el video de la cárcel",
+      "sound": "Audio/video a negro",
+      "lights": "Blackout de transición",
+      "stage": "Preparar proscenio",
+      "actors": "Padre Jorge listo a la derecha"
+    },
+    {
+      "id": 109,
+      "num": "109",
+      "block": "ESCENA 19 · DIABLITOS Y ANGELITOS",
+      "cue": "Padre Jorge: «¿Quién anda ahí?»",
+      "sound": "Ambiente de suspenso corto (opcional)",
+      "lights": "Luz de proscenio sobre Padre",
+      "stage": "Proscenio",
+      "actors": "Padre entra por la derecha"
+    },
+    {
+      "id": 110,
+      "num": "110",
+      "block": "ESCENA 19 · DIABLITOS Y ANGELITOS",
+      "cue": "Entra Sabel",
+      "sound": "BOMBA · entrada; CONFIRMAR si se reemplaza por SEXY",
+      "lights": "Ambiente rojo",
+      "stage": "Proscenio",
+      "actors": "Sabel entra por la izquierda"
+    },
+    {
+      "id": 111,
+      "num": "111",
+      "block": "ESCENA 19 · DIABLITOS Y ANGELITOS",
+      "cue": "Aguafiestas: «Hola, padre. Y chao tú»",
+      "sound": "Sonido celestial/hadas",
+      "lights": "Azul de angelitos",
+      "stage": "Proscenio",
+      "actors": "Aguafiestas y Aguafresca entran por la izquierda"
+    },
+    {
+      "id": 112,
+      "num": "112",
+      "block": "ESCENA 19 · DIABLITOS Y ANGELITOS",
+      "cue": "Angelitos sacan físicamente a Sabel",
+      "sound": "Sonido de correr/forcejeo gracioso",
+      "lights": "Azul gana sobre rojo",
+      "stage": "Proscenio",
+      "actors": "Sabel sale empujada por la derecha"
+    },
+    {
+      "id": 113,
+      "num": "113",
+      "block": "ESCENA 20 · PADRE Y ANGELITOS",
+      "cue": "Quedan Padre Jorge y los angelitos",
+      "sound": "Fondo celestial suave (opcional)",
+      "lights": "Azul/blanco estable",
+      "stage": "Proscenio",
+      "actors": "Padre, Aguafiestas y Aguafresca"
+    },
+    {
+      "id": 114,
+      "num": "114",
+      "block": "ESCENA 20 · PADRE Y ANGELITOS",
+      "cue": "Aguafresca lee: «Caso chocolate»",
+      "sound": "Paso de página + sting cómico (opcional)",
+      "lights": "Mantener",
+      "stage": "Proscenio",
+      "actors": "Utilería: libro/expediente del Padre"
+    },
+    {
+      "id": 115,
+      "num": "115",
+      "block": "ESCENA 20 · PADRE Y ANGELITOS",
+      "cue": "Padre: «Es hora de trabajar en el confesionario»",
+      "sound": "",
+      "lights": "Fade a blackout",
+      "stage": "Preparar proyección",
+      "actors": "Padre sale derecha; angelitos salen izquierda"
+    },
+    {
+      "id": 116,
+      "num": "116",
+      "block": "VIDEO · SEGUNDA OPORTUNIDAD",
+      "cue": "Blackout completo",
+      "sound": "Video del Padre hablando con los ladrones",
+      "lights": "Escenario y sala oscuros",
+      "stage": "Pantalla/ciclorama",
+      "actors": "Video grabado"
+    },
+    {
+      "id": 117,
+      "num": "117",
+      "block": "VIDEO · SEGUNDA OPORTUNIDAD",
+      "cue": "Narración: «Una segunda oportunidad»",
+      "sound": "Final del video / fade out",
+      "lights": "Blackout de transición",
+      "stage": "Preparar escena siguiente",
+      "actors": ""
+    },
+    {
+      "id": 118,
+      "num": "118",
+      "block": "ESCENA 20A · SACERDOTES (OPCIONAL)",
+      "cue": "Si se mantiene la escena de los seis sacerdotes",
+      "sound": "Fondo musical suave · POR CONFIRMAR",
+      "lights": "Cálida general",
+      "stage": "Mesa/sillas y seis panes",
+      "actors": "Los seis sacerdotes; Padre Jorge es Sacerdote 4"
+    },
+    {
+      "id": 119,
+      "num": "119",
+      "block": "ESCENA 20A · SACERDOTES (OPCIONAL)",
+      "cue": "Termina el chiste de los seis panes",
+      "sound": "Sting cómico / transición",
+      "lights": "Fade de salida",
+      "stage": "Retirar mesa, sillas y panes",
+      "actors": "Sacerdotes se preparan para concierto"
+    },
+    {
+      "id": 120,
+      "num": "120",
+      "block": "ESCENA 21 · LOS PADRECITOS",
+      "cue": "Karin y Paulita toman el centro",
+      "sound": "",
+      "lights": "Frontal completo",
+      "stage": "Proscenio o escenario despejado",
+      "actors": "Karin y Paulita entran por la izquierda"
+    },
+    {
+      "id": 121,
+      "num": "121",
+      "block": "ESCENA 21 · LOS PADRECITOS",
+      "cue": "Karin: «¡Con ustedes, Los Padrecitos!»",
+      "sound": "Fanfarria/entrada de banda · POR CONFIRMAR",
+      "lights": "Cambio a concierto",
+      "stage": "Micrófonos e instrumentos listos",
+      "actors": "Karin y Paulita salen izquierda; Los Padrecitos ocupan escena"
+    },
+    {
+      "id": 122,
+      "num": "122",
+      "block": "CONCIERTO · LOS PADRECITOS",
+      "cue": "Director musical da entrada",
+      "sound": "Pistas/repertorio de Los Padrecitos · POR CONFIRMAR",
+      "lights": "Diseño de concierto; colores y movimientos",
+      "stage": "Escenario completo",
+      "actors": "Los Padrecitos permanecen durante todo el concierto"
+    },
+    {
+      "id": 123,
+      "num": "123",
+      "block": "CONCIERTO · LOS PADRECITOS",
+      "cue": "Termina la última canción",
+      "sound": "Corte/fade final + aplausos",
+      "lights": "Sube luz general de despedida",
+      "stage": "Los Padrecitos no salen",
+      "actors": "Cantantes y dobles se colocan en laterales"
+    },
+    {
+      "id": 124,
+      "num": "124",
+      "block": "ESCENA 22 · DESPEDIDA",
+      "cue": "Narrador: «Después de algún tiempo…»",
+      "sound": "Música de despedida suave · POR CONFIRMAR",
+      "lights": "Cálida general",
+      "stage": "Centro libre para entradas",
+      "actors": "Personajes entran al ser nombrados y permanecen"
+    },
+    {
+      "id": 125,
+      "num": "125",
+      "block": "ESCENA 22 · DESPEDIDA",
+      "cue": "Narrador nombra a los guardias",
+      "sound": "Sting cómico corto (opcional)",
+      "lights": "Acento al lateral de entrada",
+      "stage": "Sin cambio",
+      "actors": "Toty y guardias entran"
+    },
+    {
+      "id": 126,
+      "num": "126",
+      "block": "ESCENA 22 · DESPEDIDA",
+      "cue": "Narrador nombra a All-Borotos y Chocolatito",
+      "sound": "Rugido suave/remate (opcional)",
+      "lights": "Acento al centro",
+      "stage": "Sin cambio",
+      "actors": "Cecilia y KD entran"
+    },
+    {
+      "id": 127,
+      "num": "127",
+      "block": "ESCENA 22 · DESPEDIDA",
+      "cue": "Narrador nombra a los ladrones reformados",
+      "sound": "",
+      "lights": "Acento al centro",
+      "stage": "Sin cambio",
+      "actors": "Pata Pata y Lucho entran y hacen gestos benéficos"
+    },
+    {
+      "id": 128,
+      "num": "128",
+      "block": "ESCENA 22 · DESPEDIDA",
+      "cue": "Narrador anuncia a Cynthia y «Pancita Rica»",
+      "sound": "Sonido romántico corto",
+      "lights": "Luz romántica",
+      "stage": "Sin cambio",
+      "actors": "Cynthia y Lucho se muestran enamorados"
+    },
+    {
+      "id": 129,
+      "num": "129",
+      "block": "ESCENA 22 · DESPEDIDA",
+      "cue": "Narrador cuenta el cambio de Cizaña",
+      "sound": "Sonido celestial",
+      "lights": "Azul/blanco",
+      "stage": "Sin cambio",
+      "actors": "Angelitos y Cizaña con ropa de angelito"
+    },
+    {
+      "id": 130,
+      "num": "130",
+      "block": "ESCENA 22 · DESPEDIDA",
+      "cue": "Narrador recuerda a Galán y Paulita",
+      "sound": "O Sole Mio o sting romántico breve",
+      "lights": "Rojo romántico",
+      "stage": "Sin cambio",
+      "actors": "Galán y Paulita entran juntos"
+    },
+    {
+      "id": 131,
+      "num": "131",
+      "block": "ESCENA 22 · DESPEDIDA",
+      "cue": "Narrador: «Ahora Karin usa dos reglas»",
+      "sound": "Sting cómico corto",
+      "lights": "Acento sobre Karin",
+      "stage": "Sin cambio",
+      "actors": "Karin entra con dos reglas"
+    },
+    {
+      "id": 132,
+      "num": "132",
+      "block": "ESCENA 22 · DESPEDIDA",
+      "cue": "Narrador anuncia el nuevo trabajo de Armando",
+      "sound": "Fanfarria teatral corta",
+      "lights": "Acento sobre Armando",
+      "stage": "Sin cambio",
+      "actors": "Armando entra con Daniel y producción"
+    },
+    {
+      "id": 133,
+      "num": "133",
+      "block": "FINAL",
+      "cue": "Elenco: «¡El show siempre debe continuar!»",
+      "sound": "Tarimazo final · pista POR CONFIRMAR",
+      "lights": "Todo el diseño: colores + movimiento + frontales",
+      "stage": "Escenario completo",
+      "actors": "Todo el elenco; nadie sale"
+    },
+    {
+      "id": 134,
+      "num": "134",
+      "block": "FINAL",
+      "cue": "Termina el Tarimazo",
+      "sound": "Fade/corte de pista",
+      "lights": "Luz de saludo",
+      "stage": "Telón preparado",
+      "actors": "Saludo y venia de todo el elenco"
+    },
+    {
+      "id": 135,
+      "num": "135",
+      "block": "FINAL",
+      "cue": "Director de escena da cierre",
+      "sound": "Música de salida/aplausos · POR CONFIRMAR",
+      "lights": "Fade lento",
+      "stage": "Cerrar telón",
+      "actors": "Elenco permanece hasta cierre total"
+    }
+  ]
+}
