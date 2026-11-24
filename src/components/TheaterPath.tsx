@@ -13,7 +13,7 @@ import {
   type DeptKey,
   type MicMap,
 } from "@/lib/libreto";
-import { useMics } from "@/lib/mics";
+import { useMics, useNotes } from "@/lib/mics";
 import { CastLine, MicLine, micSummary } from "./Cast";
 import { DeptCard } from "./DeptCard";
 import { MicPanel } from "./MicPanel";
@@ -36,6 +36,15 @@ export function TheaterPath() {
   const [drawer, setDrawer] = useState(false);
   const [micOpen, setMicOpen] = useState(false);
   const { mics, setMic, replaceAll } = useMics();
+  const { notes, setNote, replaceNotes } = useNotes();
+  const editMic = (name: string) => {
+    const v = window.prompt(`Micrófono de ${name}:`, mics[name] ?? "");
+    if (v !== null) setMic(name, v);
+  };
+  const editNote = () => {
+    const v = window.prompt(`Nota para el pie ${cue.num}:`, notes[cue.num] ?? "");
+    if (v !== null) setNote(cue.num, v);
+  };
   const index = Math.min(
     Math.max(0, Number.isFinite(stored) ? stored : 0),
     LAST,
@@ -165,13 +174,26 @@ export function TheaterPath() {
             <div>
               <p className="mb-1 text-xs font-bold tracking-[0.2em] text-emerald-300 uppercase">Cuándo</p>
               <p className="text-3xl leading-tight font-bold text-balance lg:text-5xl">{cue.cue}</p>
+              <button
+                type="button"
+                onPointerDown={(e) => e.stopPropagation()}
+                onPointerUp={(e) => e.stopPropagation()}
+                onClick={editNote}
+                className={cn(
+                  "mt-3 flex max-w-full items-start gap-2 rounded-2xl px-3 py-2 text-left text-base",
+                  notes[cue.num] ? "bg-yellow-300 text-neutral-900" : "border border-dashed border-white/20 text-white/45",
+                )}
+              >
+                <span>📝</span>
+                <span className="whitespace-pre-wrap">{notes[cue.num] ?? "Agregar nota"}</span>
+              </button>
             </div>
 
             {shown.length > 0 ? (
               <div className={cn("grid min-h-0 grid-cols-1 content-start gap-3 overflow-y-auto", cols)}>
                 {shown.map(({ dept, state }) => (
                   <DeptCard key={dept.key} dept={dept} state={state} focus={role !== "all"}>
-                    {dept.key === "actors" && <CastLine p={cast} mics={mics} />}
+                    {dept.key === "actors" && <CastLine p={cast} mics={mics} onEditMic={editMic} />}
                     {dept.key === "sound" && (cast.enter.length > 0 || cast.leave.length > 0) && (
                       <MicLine p={cast} mics={mics} />
                     )}
@@ -242,7 +264,7 @@ export function TheaterPath() {
         </button>
       </footer>
 
-      <MicPanel open={micOpen} mics={mics} onChange={setMic} onReplace={replaceAll} onClose={() => setMicOpen(false)} />
+      <MicPanel open={micOpen} mics={mics} onChange={setMic} onReplace={replaceAll} notes={notes} onReplaceNotes={replaceNotes} onClose={() => setMicOpen(false)} />
       <SceneDrawer
         open={drawer}
         index={index}

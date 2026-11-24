@@ -10,24 +10,32 @@ interface MicPanelProps {
   mics: MicMap;
   onChange: (name: string, value: string) => void;
   onReplace: (map: MicMap) => void;
+  notes: MicMap;
+  onReplaceNotes: (map: MicMap) => void;
   onClose: () => void;
 }
 
 /** Lista del elenco para anotar el número de micrófono de cada uno. */
-export function MicPanel({ open, mics, onChange, onReplace, onClose }: MicPanelProps) {
+export function MicPanel({ open, mics, onChange, onReplace, notes, onReplaceNotes, onClose }: MicPanelProps) {
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
-    await navigator.clipboard.writeText(JSON.stringify(mics, null, 2));
+    await navigator.clipboard.writeText(JSON.stringify({ mics, notes }, null, 2));
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
   };
 
   const paste = () => {
-    const text = window.prompt("Pega aquí la lista de micrófonos copiada desde otro dispositivo:");
+    const text = window.prompt("Pega aquí los micrófonos y notas copiados desde otro dispositivo:");
     if (!text) return;
     try {
-      onReplace(JSON.parse(text) as MicMap);
+      const data = JSON.parse(text) as { mics?: MicMap; notes?: MicMap } & MicMap;
+      if (data.mics || data.notes) {
+        if (data.mics) onReplace(data.mics);
+        if (data.notes) onReplaceNotes(data.notes);
+      } else {
+        onReplace(data);
+      }
     } catch {
       window.alert("El texto no es una lista válida.");
     }
@@ -69,7 +77,7 @@ export function MicPanel({ open, mics, onChange, onReplace, onClose }: MicPanelP
         </ul>
 
         <footer className="flex gap-2 border-t border-white/10 px-5 py-4 text-sm">
-          <p className="flex-1 text-white/40">Se guarda en este dispositivo.</p>
+          <p className="flex-1 text-white/40">Se guarda en este dispositivo. Copiar incluye las notas.</p>
           <button type="button" onClick={paste} className="rounded-full border border-white/15 px-4 py-2 hover:bg-white/10">
             Pegar
           </button>

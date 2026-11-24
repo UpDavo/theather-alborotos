@@ -10,7 +10,10 @@ function Mic({ n }: { n?: string }) {
 }
 
 /** Actores: quiénes están en escena, con su micrófono. */
-export function CastLine({ p, mics }: { p: Presence; mics: MicMap }) {
+/** Evita que tocar un chip avance el pie. */
+const stop = (e: React.PointerEvent) => e.stopPropagation();
+
+export function CastLine({ p, mics, onEditMic }: { p: Presence; mics: MicMap; onEditMic?: (name: string) => void }) {
   if (p.on.length === 0 && p.leave.length === 0) {
     return <p className="text-sm text-white/40">Escenario vacío</p>;
   }
@@ -19,17 +22,21 @@ export function CastLine({ p, mics }: { p: Presence; mics: MicMap }) {
       {p.on.map((name) => {
         const enters = p.enter.includes(name);
         return (
-          <span
+          <button
+            type="button"
             key={name}
+            onPointerDown={stop}
+            onPointerUp={stop}
+            onClick={() => onEditMic?.(name)}
             className={cn(
-              "flex items-center gap-1.5 rounded-full border py-1 pr-3 pl-1.5 text-sm",
+              "flex items-center gap-1.5 rounded-full border py-1 pr-3 pl-1.5 text-sm active:scale-95",
               enters ? "border-emerald-400 bg-emerald-400/15 text-white" : "border-white/15 text-white/80",
             )}
           >
             <Mic n={mics[name]} />
             {name}
             {enters && <span className="text-[10px] font-bold text-emerald-300 uppercase">entra</span>}
-          </span>
+          </button>
         );
       })}
       {p.leave.map((name) => (

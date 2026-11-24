@@ -1,37 +1,50 @@
 "use client";
 
 import { useCallback, useMemo } from "react";
-import type { MicMap } from "./libreto";
 import { usePersisted } from "./persisted";
 
-/** Números de micrófono guardados en este dispositivo. */
-export function useMics() {
-  const [raw, setRaw] = usePersisted<string>("tp:mics", "{}");
-  const mics = useMemo<MicMap>(() => {
-    try {
-      return JSON.parse(raw) as MicMap;
-    } catch {
-      return {};
-    }
-  }, [raw]);
+export type StrMap = Record<string, string>;
 
-  const setMic = useCallback(
+function parse(raw: string): StrMap {
+  try {
+    const v = JSON.parse(raw);
+    return v && typeof v === "object" ? (v as StrMap) : {};
+  } catch {
+    return {};
+  }
+}
+
+/** Mapa texto→texto guardado en localStorage (este dispositivo). */
+export function usePersistedMap(key: string) {
+  const [raw, setRaw] = usePersisted<string>(key, "{}");
+  const map = useMemo(() => parse(raw), [raw]);
+
+  const set = useCallback(
     (name: string, value: string) => {
       setRaw((prev) => {
-        let map: MicMap = {};
-        try {
-          map = JSON.parse(prev) as MicMap;
-        } catch {}
+        const m = parse(prev);
         const v = value.trim();
-        if (v) map[name] = v;
-        else delete map[name];
-        return JSON.stringify(map);
+        if (v) m[name] = v;
+        else delete m[name];
+        return JSON.stringify(m);
       });
     },
     [setRaw],
   );
 
-  const replaceAll = useCallback((map: MicMap) => setRaw(JSON.stringify(map)), [setRaw]);
+  const replaceAll = useCallback((m: StrMap) => setRaw(JSON.stringify(m)), [setRaw]);
 
-  return { mics, setMic, replaceAll };
+  return { map, set, replaceAll };
+}
+
+/** Números de micrófono por persona. */
+export function useMics() {
+  const { map, set, replaceAll } = usePersistedMap("tp:mics");
+  return { mics: map, setMic: set, replaceAll };
+}
+
+/** Notas libres por pie (clave = número de pie). */
+export function useNotes() {
+  const { map, set, replaceAll } = usePersistedMap("tp:notes");
+  return { notes: map, setNote: set, replaceNotes: replaceAll };
 }

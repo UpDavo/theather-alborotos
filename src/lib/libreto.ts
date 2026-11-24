@@ -1,5 +1,6 @@
 import data from "@/data/libreto.json";
 import escena from "@/data/escena.json";
+import actos from "@/data/actos.json";
 
 export type DeptKey = "sound" | "lights" | "stage" | "actors";
 
@@ -129,44 +130,32 @@ export function actionCount(index: number): number {
   return DEPTS.filter((d) => deptState(index, d.key).kind === "action").length;
 }
 
-/** Tipo de acto: define el color en la línea de tiempo. */
-export type ActKind = "escena" | "presentacion" | "video" | "concierto" | "marco";
+/** Trama de cada acto: define emoji y color en la línea de tiempo. */
+export type Trama = "marco" | "escuela" | "robo" | "tigresa" | "conciencia" | "policia" | "iglesia" | "video";
+
+export const TRAMAS: Record<Trama, { label: string; emoji: string; bar: string; fill: string }> = {
+  marco: { label: "Inicio / Final", emoji: "🎭", bar: "bg-sky-500", fill: "bg-sky-300" },
+  escuela: { label: "Escuela", emoji: "🏫", bar: "bg-emerald-600", fill: "bg-emerald-300" },
+  robo: { label: "Robo", emoji: "💰", bar: "bg-red-600", fill: "bg-red-300" },
+  tigresa: { label: "Tigresa", emoji: "🐯", bar: "bg-orange-500", fill: "bg-orange-300" },
+  conciencia: { label: "Conciencia", emoji: "😇", bar: "bg-indigo-500", fill: "bg-indigo-300" },
+  policia: { label: "Policía", emoji: "🚓", bar: "bg-blue-600", fill: "bg-blue-300" },
+  iglesia: { label: "Iglesia", emoji: "⛪", bar: "bg-amber-500", fill: "bg-amber-200" },
+  video: { label: "Video", emoji: "📺", bar: "bg-violet-600", fill: "bg-violet-300" },
+};
 
 export interface Act {
   index: number;
   /** "ESCENA 8", "PRESENTACIÓN", "VIDEO"… */
   name: string;
-  /** Etiqueta corta para la barra: "E8", "PRES.", "VIDEO"… */
-  short: string;
-  kind: ActKind;
+  /** Nombre legible: "Robo del trofeo". */
+  label: string;
+  trama: Trama;
   start: number;
   end: number; // inclusivo
 }
 
-export const ACT_KINDS: { kind: ActKind; label: string; bar: string; fill: string; text: string }[] = [
-  { kind: "marco", label: "Apertura / Final", bar: "bg-sky-400", fill: "bg-sky-400", text: "text-sky-300" },
-  { kind: "escena", label: "Escena", bar: "bg-neutral-300", fill: "bg-white", text: "text-white" },
-  { kind: "presentacion", label: "Presentación", bar: "bg-emerald-400", fill: "bg-emerald-400", text: "text-emerald-300" },
-  { kind: "video", label: "Video", bar: "bg-violet-400", fill: "bg-violet-400", text: "text-violet-300" },
-  { kind: "concierto", label: "Concierto", bar: "bg-amber-400", fill: "bg-amber-400", text: "text-amber-300" },
-];
-
-function actKind(name: string): ActKind {
-  if (name.startsWith("PRESENTACIÓN")) return "presentacion";
-  if (name.startsWith("VIDEO")) return "video";
-  if (name.startsWith("CONCIERTO")) return "concierto";
-  if (name.startsWith("ESCENA")) return "escena";
-  return "marco";
-}
-
-function actShort(name: string): string {
-  const m = name.match(/^ESCENA\s+(\S+)/);
-  if (m) return `E${m[1]}`;
-  if (name.startsWith("PRESENTACIÓN")) return "PRES.";
-  if (name.startsWith("CONCIERTO")) return "CONC.";
-  if (name.startsWith("APERTURA")) return "INICIO";
-  return name;
-}
+const ACT_INFO = actos as Record<string, { trama: Trama; label: string }>;
 
 /** Bloques consecutivos con el mismo acto (ESCENA 8 · …, ESCENA 8 · …) se unen. */
 export const ACTS: Act[] = CUES.reduce<Act[]>((acc, cue, i) => {
@@ -175,7 +164,10 @@ export const ACTS: Act[] = CUES.reduce<Act[]>((acc, cue, i) => {
   if (last && last.name === name) {
     last.end = i;
   } else {
-    acc.push({ index: acc.length, name, short: actShort(name), kind: actKind(name), start: i, end: i });
+    // Nombres repetidos (VIDEO) se distinguen como VIDEO@1, VIDEO@2…
+    const n = acc.filter((a) => a.name === name).length + 1;
+    const info = ACT_INFO[`${name}@${n}`] ?? ACT_INFO[name] ?? { trama: "marco", label: name };
+    acc.push({ index: acc.length, name, label: info.label, trama: info.trama, start: i, end: i });
   }
   return acc;
 }, []);
