@@ -113,8 +113,8 @@ const KEYFRAMES: Record<string, Plan> = {
   "49": { telon: "cerrado", e2: "abierto", items: RECAMARA },
   // Blackout: baja el ciclorama (voces en off, noticiero, foto de comisaría).
   "50": { telon: "ciclorama", items: [] },
-  // En el blackout del 58 sale el trofeo; la escuela abre con el trofeo cerca del público.
-  "59": { telon: "abierto", items: MESA_TROFEO },
+  // Blackout: se sube el ciclorama (salen las bailarinas) y sale el trofeo cerca del público.
+  "58": { telon: "abierto", items: MESA_TROFEO },
   // Antes de bajar el ciclorama: banco y mesita al proscenio, se quita el trofeo.
   "70": { telon: "ciclorama", items: PARQUE },
   // Parque de día / noche proyectado; el aula del robo se arma detrás.
