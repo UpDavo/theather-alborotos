@@ -106,6 +106,8 @@ const KEYFRAMES: Record<string, Plan> = {
   // Ciclorama con proyección del hospital (no telón).
   "37": { telon: "ciclorama", items: RECAMARA },
   "38": { telon: "ciclorama", items: RECAMARA },
+  // Silla de ruedas en la esquina inferior derecha del proscenio (39–40).
+  "39": { telon: "ciclorama", items: [...RECAMARA, { kind: "silla", x: 790, y: 560, label: "Silla de ruedas", labelAt: "left" }] },
   // Se levanta el ciclorama y al mismo tiempo se abre E2 (Recámara).
   "41": { telon: "abierto", e2: "abierto", items: RECAMARA },
   "49": { telon: "cerrado", e2: "abierto", items: RECAMARA },
