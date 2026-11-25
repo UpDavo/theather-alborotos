@@ -1,7 +1,5 @@
 {
-  "APERTURA": { "trama": "marco", "label": "Apertura" },
-  "ESCENA 1": { "trama": "escuela", "label": "Daniel y Karin" },
-  "ESCENA 1A": { "trama": "escuela", "label": "Guardias" },
+  "ESCENA 1": { "trama": "escuela", "label": "Presentación" },
   "PRESENTACIÓN": { "trama": "escuela", "label": "Clases de arte" },
   "ESCENA 2": { "trama": "robo", "label": "El robo" },
   "ESCENA 3": { "trama": "escuela", "label": "Armando en la escuela" },

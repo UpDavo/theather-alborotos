@@ -5,6 +5,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Zoom out: toda la interfaz (en rem) un poco más chica para que quepa el plano. */
+html {
+  font-size: 87.5%;
+}
+
 html,
 body {
   background: #000;

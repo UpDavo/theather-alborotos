@@ -7,15 +7,20 @@ import {
   CUES,
   DEPTS,
   TITLE,
+  VIEWS,
+  actorLines,
   deptState,
   presence,
   sceneOf,
   type DeptKey,
   type MicMap,
+  type ViewKey,
 } from "@/lib/libreto";
 import { useMics, useNotes } from "@/lib/mics";
-import { CastLine, MicLine, micSummary } from "./Cast";
+import { ActorsCard, MicLine, micSummary } from "./Cast";
 import { DeptCard } from "./DeptCard";
+import { StagePlan } from "./StagePlan";
+import { planOf } from "@/lib/plano";
 import { MicPanel } from "./MicPanel";
 import { NotesDrawer } from "./NotesDrawer";
 import { SceneDrawer } from "./SceneDrawer";
@@ -29,11 +34,13 @@ import {
 } from "./icons";
 
 const LAST = CUES.length - 1;
-type Role = DeptKey | "all";
+const deptsOf = (view: ViewKey) => VIEWS.find((v) => v.key === view)?.depts ?? VIEWS[0].depts;
 
 export function TheaterPath() {
   const [stored, setIndex] = usePersisted<number>("tp:index", 0);
-  const [role, setRole] = usePersisted<Role>("tp:role", "all");
+  const [storedView, setView] = usePersisted<ViewKey>("tp:view", "show");
+  const view: ViewKey = VIEWS.some((v) => v.key === storedView) ? storedView : "show";
+  const viewDepts = deptsOf(view);
   const [drawer, setDrawer] = useState(false);
   const [micOpen, setMicOpen] = useState(false);
   const [notesOpen, setNotesOpen] = useState(false);
@@ -114,11 +121,10 @@ export function TheaterPath() {
 
   const progress = ((index + 1) / CUES.length) * 100;
   const cast = presence(index);
-  const states = DEPTS.map((d) => ({ dept: d, state: deptState(index, d.key) }));
-  // Con un rol elegido solo se ve su área; con "Todos", solo las que actúan.
-  const shown = role === "all" ? states.filter((x) => x.state.kind === "action") : states.filter((x) => x.dept.key === role);
-  const held = role === "all" ? states.filter((x) => x.state.kind === "hold") : [];
-  const cols = shown.length >= 4 ? "md:grid-cols-2" : shown.length === 3 ? "md:grid-cols-3" : shown.length === 2 ? "md:grid-cols-2" : "";
+  const actors = actorLines(index);
+  // Cada vista muestra siempre sus áreas (las que solo mantienen, atenuadas).
+  const shown = DEPTS.filter((d) => viewDepts.includes(d.key)).map((d) => ({ dept: d, state: deptState(index, d.key) }));
+  const cols = shown.length === 2 ? "md:grid-cols-2" : "";
 
   return (
     <div className="flex h-dvh flex-col gap-3 overflow-hidden px-4 pt-[max(env(safe-area-inset-top),12px)] pb-[max(env(safe-area-inset-bottom),12px)] select-none md:px-6">
@@ -198,59 +204,46 @@ export function TheaterPath() {
               </button>
             </div>
 
-            {shown.length > 0 ? (
+            {view === "stage" ? (
+              <div className="flex min-h-0 flex-1 gap-4">
+                <StagePlan plan={planOf(index)} className="min-h-0 min-w-0 flex-1 self-stretch" />
+                <div className="flex w-[34%] max-w-sm shrink-0 flex-col gap-2 overflow-y-auto">
+                  {shown.map(({ dept, state }) => (
+                    <StageHint key={dept.key} dept={dept} state={state} />
+                  ))}
+                </div>
+              </div>
+            ) : (
               <div className={cn("grid min-h-0 grid-cols-1 content-start gap-3 overflow-y-auto", cols)}>
                 {shown.map(({ dept, state }) => (
-                  <DeptCard key={dept.key} dept={dept} state={state} focus={role !== "all"}>
-                    {dept.key === "actors" && <CastLine p={cast} mics={mics} onEditMic={editMic} />}
-                    {dept.key === "sound" && (cast.enter.length > 0 || cast.leave.length > 0) && (
-                      <MicLine p={cast} mics={mics} />
-                    )}
+                  <DeptCard key={dept.key} dept={dept} state={state}>
+                    {dept.key === "sound" && (cast.enter.length > 0 || cast.leave.length > 0) && <MicLine p={cast} mics={mics} />}
                   </DeptCard>
                 ))}
               </div>
-            ) : (
-              <p className="rounded-[20px] border border-dashed border-white/15 px-5 py-6 text-center text-lg text-white/50">
-                Nadie cambia nada en este pie. Solo seguir la escena.
-              </p>
-            )}
-
-            {held.length > 0 && (
-              <p className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-white/40">
-                <span className="text-xs font-bold tracking-widest uppercase">Mantener</span>
-                {held.map(({ dept }) => {
-                  const Icon = DEPT_ICON[dept.key];
-                  return (
-                    <span key={dept.key} className="flex items-center gap-1.5">
-                      <Icon className="size-4" /> {dept.short}
-                    </span>
-                  );
-                })}
-              </p>
             )}
           </div>
         </section>
 
-        <aside className="flex min-h-0 flex-col overflow-y-auto">
-          <UpNext index={index} role={role} mics={mics} sceneChanges={!!nextScene && nextScene.index !== scene.index} />
+        <aside className="flex min-h-0 flex-col gap-3 overflow-y-auto">
+          <UpNext index={index} view={view} mics={mics} sceneChanges={!!nextScene && nextScene.index !== scene.index} />
+          <ActorsCard lines={actors.people} general={actors.general} mics={mics} onEditMic={editMic} />
         </aside>
       </main>
 
       {/* Abajo: rol + navegación */}
       <footer className="flex items-center gap-3">
-        <div className="flex h-16 items-center gap-1 rounded-full border border-white/10 bg-neutral-800/60 p-1.5" role="group" aria-label="Mi rol">
-          <RoleChip active={role === "all"} onClick={() => setRole("all")}>
-            Todos
-          </RoleChip>
-          {DEPTS.map((d) => {
-            const Icon = DEPT_ICON[d.key];
-            return (
-              <RoleChip key={d.key} active={role === d.key} onClick={() => setRole(d.key)}>
-                <Icon className={cn("size-5", role === d.key ? "" : d.accent)} />
-                <span className="hidden md:inline">{d.short}</span>
-              </RoleChip>
-            );
-          })}
+        <div className="flex h-16 items-center gap-1 rounded-full border border-white/10 bg-neutral-800/60 p-1.5" role="group" aria-label="Vista">
+          {VIEWS.map((v) => (
+            <RoleChip key={v.key} active={view === v.key} onClick={() => setView(v.key)}>
+              {v.depts.map((k) => {
+                const Icon = DEPT_ICON[k];
+                const d = DEPTS.find((x) => x.key === k)!;
+                return <Icon key={k} className={cn("size-5", view === v.key ? "" : d.accent)} />;
+              })}
+              <span className="hidden md:inline">{v.label}</span>
+            </RoleChip>
+          ))}
         </div>
 
         <button
@@ -295,12 +288,12 @@ export function TheaterPath() {
 /** Vista previa de lo que viene. Con un rol elegido, avisa cuándo le toca. */
 function UpNext({
   index,
-  role,
+  view,
   mics,
   sceneChanges,
 }: {
   index: number;
-  role: Role;
+  view: ViewKey;
   mics: MicMap;
   sceneChanges: boolean;
 }) {
@@ -315,14 +308,14 @@ function UpNext({
 
   const next = CUES[index + 1];
   const nextScene = sceneOf(index + 1);
-  const dept = role === "all" ? null : DEPTS.find((d) => d.key === role)!;
+  const keys = deptsOf(view);
+  const depts = DEPTS.filter((d) => keys.includes(d.key));
+  const acts = (i: number) => depts.some((d) => deptState(i, d.key).kind === "action");
   let myNext = -1;
-  if (dept) {
-    for (let i = index + 1; i <= LAST; i++) {
-      if (deptState(i, dept.key).kind === "action") {
-        myNext = i;
-        break;
-      }
+  for (let i = index + 1; i <= LAST; i++) {
+    if (acts(i)) {
+      myNext = i;
+      break;
     }
   }
 
@@ -346,9 +339,9 @@ function UpNext({
       <p className="text-lg leading-snug font-semibold">{next.cue}</p>
 
       <ul className="flex flex-col gap-1.5">
-        {DEPTS.map((d) => {
+        {depts.map((d) => {
           const s = deptState(index + 1, d.key);
-          if (s.kind !== "action" || (dept && dept.key !== d.key)) return null;
+          if (s.kind !== "action") return null;
           const Icon = DEPT_ICON[d.key];
           return (
             <li key={d.key} className="flex gap-2 text-sm">
@@ -360,16 +353,42 @@ function UpNext({
       </ul>
 
       {/* Si la acción es en el siguiente pie ya aparece arriba; si no, se muestra cuál viene. */}
-      {dept && myNext !== index + 1 && (
-        <div className={cn("rounded-2xl border px-3 py-2.5", dept.ring, dept.soft)}>
-          <p className={cn("text-[11px] font-bold tracking-widest uppercase", dept.accent)}>
-            {myNext === -1 ? dept.short : `Luego · pie ${CUES[myNext].num}`}
+      {myNext !== index + 1 && (
+        <div className="rounded-2xl border border-white/15 bg-white/5 px-3 py-2.5">
+          <p className="text-[11px] font-bold tracking-widest text-white/60 uppercase">
+            {myNext === -1 ? "Sin más acciones" : `Luego · pie ${CUES[myNext].num}`}
           </p>
-          <p className="text-base font-semibold text-white">
-            {myNext === -1 ? "Ya no hay más acciones." : actionText(myNext, dept.key, mics)}
-          </p>
+          {myNext !== -1 && (
+            <ul className="flex flex-col gap-1">
+              {depts.map((d) => {
+                if (deptState(myNext, d.key).kind !== "action") return null;
+                const Icon = DEPT_ICON[d.key];
+                return (
+                  <li key={d.key} className="flex gap-2 text-base font-semibold text-white">
+                    <Icon className={cn("mt-1 size-4 shrink-0", d.accent)} />
+                    <span>{actionText(myNext, d.key, mics)}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </div>
       )}
+    </div>
+  );
+}
+
+/** Indicación de escenario en una línea, encima del plano. */
+function StageHint({ dept, state }: { dept: (typeof DEPTS)[number]; state: ReturnType<typeof deptState> }) {
+  const Icon = DEPT_ICON[dept.key];
+  const action = state.kind === "action";
+  return (
+    <div className={cn("flex items-start gap-2 rounded-2xl border px-3 py-2", action ? cn(dept.soft, dept.ring) : "border-white/10 bg-neutral-800/50")}>
+      <Icon className={cn("mt-0.5 size-5 shrink-0", action ? dept.accent : "text-white/40")} />
+      <p className={cn("text-lg leading-snug", action ? "font-semibold text-white" : "text-white/45")}>
+        {state.text || "Sin cambio"}
+        {!action && <span className="ml-2 text-xs font-bold tracking-wide text-white/40 uppercase">Mantener</span>}
+      </p>
     </div>
   );
 }
@@ -430,15 +449,9 @@ function useWakeLock() {
   }, []);
 }
 
-/** Texto de la acción de un área, sumando cambios de micrófonos / elenco. */
+/** Texto de la acción de un área; en sonido suma qué micrófonos encender/apagar. */
 function actionText(i: number, key: DeptKey, mics: MicMap): string {
   const text = deptState(i, key).text;
-  if (key !== "sound" && key !== "actors") return text;
-  if (key === "actors" && text) return text;
-  const p = presence(i);
-  const extra =
-    key === "sound"
-      ? micSummary(p, mics)
-      : [p.enter.length && `Entran: ${p.enter.join(", ")}`, p.leave.length && `Salen: ${p.leave.join(", ")}`].filter(Boolean).join(" · ");
-  return [text, extra].filter(Boolean).join(" · ");
+  if (key !== "sound") return text;
+  return [text, micSummary(presence(i), mics)].filter(Boolean).join(" · ");
 }

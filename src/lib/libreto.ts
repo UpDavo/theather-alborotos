@@ -107,7 +107,7 @@ export interface DeptState {
   pending: boolean;
 }
 
-const HOLD = /^(mantener|sin cambio)/i;
+const HOLD = /^(mantener|se mantiene|sin cambio)/i;
 
 /** Decide si un departamento tiene que hacer algo en este pie o solo mantener. */
 export function deptState(index: number, key: DeptKey): DeptState {
@@ -204,3 +204,52 @@ export function presence(index: number): Presence {
 
 /** Número de micrófono por persona (lo anota el equipo en la app). */
 export type MicMap = Record<string, string>;
+
+/* ---------- Vistas: Sonido + Luces / Escenario ---------- */
+
+export type ViewKey = "show" | "stage";
+
+export interface ViewInfo {
+  key: ViewKey;
+  label: string;
+  depts: DeptKey[];
+}
+
+export const VIEWS: ViewInfo[] = [
+  { key: "show", label: "Sonido + Luces", depts: ["sound", "lights"] },
+  { key: "stage", label: "Escenario", depts: ["stage"] },
+];
+
+/* ---------- Qué hace cada actor ---------- */
+
+export type ActorStatus = "enter" | "leave" | "on";
+
+export interface ActorLine {
+  name: string;
+  status: ActorStatus;
+  /** Fragmentos de la columna ACTORES que lo nombran. */
+  does: string[];
+}
+
+const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+/** Reparte el texto de ACTORES / UTILERÍA entre las personas en escena. */
+export function actorLines(index: number): { people: ActorLine[]; general: string[] } {
+  const p = presence(index);
+  const parts = CUES[index].actors
+    .split(";")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const used = new Set<string>();
+  const line = (name: string, status: ActorStatus): ActorLine => {
+    const key = fold(name);
+    const does = parts.filter((s) => fold(s).includes(key));
+    does.forEach((s) => used.add(s));
+    return { name, status, does };
+  };
+  const people = [
+    ...p.on.map((n) => line(n, p.enter.includes(n) ? "enter" : "on")),
+    ...p.leave.map((n) => line(n, "leave")),
+  ];
+  return { people, general: parts.filter((s) => !used.has(s)) };
+}

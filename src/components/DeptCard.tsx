@@ -23,7 +23,7 @@ export function DeptCard({ dept, state, focus, children }: DeptCardProps) {
         <span className="ml-auto flex gap-1.5">
           {state.pending && <Tag className="bg-yellow-400 text-neutral-900">Por confirmar</Tag>}
           {state.optional && <Tag className="border border-white/30 text-white/70">Opcional</Tag>}
-          {!action && !/^(mantener|sin cambio)/i.test(state.text) && <Tag className="bg-white/10 text-white/50">Mantener</Tag>}
+          {!action && !/^(mantener|se mantiene|sin cambio)/i.test(state.text) && <Tag className="bg-white/10 text-white/50">Mantener</Tag>}
         </span>
       </div>
       {(state.text || !children) && (

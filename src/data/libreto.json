@@ -4,7 +4,7 @@
     {
       "id": 0,
       "num": "1",
-      "block": "APERTURA",
+      "block": "ESCENA 1 · APERTURA",
       "cue": "Jefe de sala confirma: público listo",
       "sound": "",
       "lights": "Luz en podio",
@@ -14,7 +14,7 @@
     {
       "id": 1,
       "num": "2",
-      "block": "APERTURA",
+      "block": "ESCENA 1 · APERTURA",
       "cue": "Daniel entra y toma el podio",
       "sound": "Micrófono de Daniel abierto",
       "lights": "Mantener luz en podio",
@@ -28,7 +28,7 @@
       "cue": "Daniel termina la bienvenida",
       "sound": "",
       "lights": "Entra Karin: se prende todo (luz completa)",
-      "stage": "Proscenio",
+      "stage": "Retirar el podio sí o sí mientras Daniel deja el podio y empieza a moverse",
       "actors": "Karin entra por la izquierda"
     },
     {
@@ -44,7 +44,7 @@
     {
       "id": 4,
       "num": "5",
-      "block": "ESCENA 1A · GUARDIAS",
+      "block": "ESCENA 1 · GUARDIAS",
       "cue": "Daniel reaparece: «Esto no se va a quedar así»",
       "sound": "",
       "lights": "Luz completa",
@@ -54,7 +54,7 @@
     {
       "id": 5,
       "num": "6",
-      "block": "ESCENA 1A · GUARDIAS",
+      "block": "ESCENA 1 · GUARDIAS",
       "cue": "Karin grita: «¡GUARDIAS!»",
       "sound": "",
       "lights": "Mantener",
@@ -64,7 +64,7 @@
     {
       "id": 6,
       "num": "7",
-      "block": "ESCENA 1A · GUARDIAS",
+      "block": "ESCENA 1 · GUARDIAS",
       "cue": "El guardia carga a Daniel",
       "sound": "Golpe/woosh corto al caer el zapato (opcional)",
       "lights": "Mantener",
@@ -74,11 +74,11 @@
     {
       "id": 7,
       "num": "8",
-      "block": "ESCENA 1A · GUARDIAS",
+      "block": "ESCENA 1 · GUARDIAS",
       "cue": "Karin se acomoda el saco y saluda al público",
       "sound": "Micrófonos Karin y Paula",
       "lights": "Frontal completo",
-      "stage": "Retirar podio si estorba",
+      "stage": "Proscenio (podio ya retirado en el pie 3)",
       "actors": "Karin y Paula al centro"
     },
     {
@@ -88,7 +88,7 @@
       "cue": "Paula hace la venia y presenta actuación",
       "sound": "",
       "lights": "Sube luz de escenario",
-      "stage": "Abrir telón; aparece la Escuela de Arte",
+      "stage": "Abrir telón; aparece la Escuela de ballet",
       "actors": "Toty lista para entrar"
     },
     {
@@ -96,9 +96,9 @@
       "num": "10",
       "block": "PRESENTACIÓN · ACTUACIÓN",
       "cue": "Toty toma posición para actuar",
-      "sound": "Voz en off de Daniel",
+      "sound": "Voz en off de Daniel · el micrófono de Daniel Wong pasa a Toty",
       "lights": "Spotlight sobre Toty; resto oscuro",
-      "stage": "Escenario escuela",
+      "stage": "Escenario Escuela de ballet",
       "actors": "Toty al centro"
     },
     {
@@ -118,7 +118,7 @@
       "cue": "Termina la tercera emoción",
       "sound": "Cerrar voz en off",
       "lights": "Sube luz general",
-      "stage": "Escuela",
+      "stage": "Escuela de ballet",
       "actors": "Toty sale; Paula entra"
     },
     {
@@ -128,7 +128,7 @@
       "cue": "Paula: «Con ustedes, las clases de canto»",
       "sound": "Cristian Castro · Azul · 00:23–01:30",
       "lights": "Estrellas en movimiento",
-      "stage": "Escuela",
+      "stage": "Escuela de ballet",
       "actors": "Mafer entra tímida; micrófono al centro"
     },
     {
@@ -148,7 +148,7 @@
       "cue": "Paula presenta a Sofía Armes",
       "sound": "I Will Survive",
       "lights": "Blackout de entrada; estrellas en movimiento",
-      "stage": "Escuela",
+      "stage": "Escuela de ballet",
       "actors": "Sofía en el centro; micrófono listo"
     },
     {
@@ -188,7 +188,7 @@
       "cue": "Paula presenta a Vittoria",
       "sound": "Pista de baile clásico",
       "lights": "Ámbar bajo con frontales",
-      "stage": "Escenario despejado",
+      "stage": "Escenario despejado de cortina",
       "actors": "Vittoria al centro"
     },
     {
@@ -198,7 +198,7 @@
       "cue": "Termina el baile de Vittoria",
       "sound": "Corte/fade de pista",
       "lights": "Blackout breve",
-      "stage": "Preparar gimnasia",
+      "stage": "Se mantiene el escenario",
       "actors": "Vittoria sale"
     },
     {
@@ -208,7 +208,7 @@
       "cue": "Entra Camila para gimnasia olímpica",
       "sound": "Pista de gimnasia",
       "lights": "Juego de luces de colores",
-      "stage": "Zona libre; colchoneta si se utiliza",
+      "stage": "Se mantiene el escenario",
       "actors": "Camila realiza piruetas"
     },
     {
@@ -218,7 +218,7 @@
       "cue": "Termina la gimnasia",
       "sound": "Corte/fade de pista",
       "lights": "Blackout breve",
-      "stage": "Retirar colchoneta",
+      "stage": "Se mantiene el escenario",
       "actors": "Camila sale; Paula toma centro"
     },
     {
@@ -228,7 +228,7 @@
       "cue": "Paula: «Me disculpan un segundo, que aquí voy yo»",
       "sound": "Time of My Life · 00:00–01:53 · fade out",
       "lights": "Movimiento + estrellas en el piso",
-      "stage": "Escenario despejado",
+      "stage": "Se mantiene el escenario",
       "actors": "Paula y bailarinas adultas"
     },
     {
@@ -238,7 +238,7 @@
       "cue": "Termina el baile de las adultas",
       "sound": "Pista hip hop niñas",
       "lights": "Blackout de cambio; luego estrellas en movimiento",
-      "stage": "Escenario despejado",
+      "stage": "Se mantiene el escenario",
       "actors": "Salen adultas; entran niñas"
     },
     {
@@ -247,8 +247,8 @@
       "block": "PRESENTACIÓN · CIERRE",
       "cue": "Termina el hip hop",
       "sound": "Corte/fade de pista",
-      "lights": "Luz general de escuela",
-      "stage": "Escuela activa",
+      "lights": "Luz general de Escuela de ballet",
+      "stage": "Se mantiene el escenario",
       "actors": "Todo el alumnado queda atrás ensayando"
     },
     {
@@ -258,7 +258,7 @@
       "cue": "Paula: «Bienvenidos a Los Desafinados»",
       "sound": "Aplausos del público",
       "lights": "Mantener general",
-      "stage": "Cerrar telón cuando Karin lleve a Paula al proscenio",
+      "stage": "Cerrar telón cuando Karin lleve a Paula al proscenio; retirar la barra de ballet",
       "actors": "Karin conduce a Paula; alumnado despeja"
     },
     {
@@ -268,7 +268,7 @@
       "cue": "Telón termina de cerrar",
       "sound": "",
       "lights": "Luz completa de proscenio",
-      "stage": "Escuela oculta",
+      "stage": "Escena en proscenio; detrás del telón poner la mesa de la directora (izquierda) y el pupitre (derecha) en E1",
       "actors": "Karin y Paula en proscenio"
     },
     {
@@ -288,7 +288,7 @@
       "cue": "Karin: «La otra vez vino un inspector de policía»",
       "sound": "Música/efecto de recuerdo",
       "lights": "Bajar proscenio durante salida",
-      "stage": "Abrir telón lentamente; escuela ordenada",
+      "stage": "Abrir telón lentamente; Escuela directora ordenada",
       "actors": "Karin y Paula salen por la izquierda, cuchicheando"
     },
     {
@@ -298,7 +298,7 @@
       "cue": "El telón queda abierto",
       "sound": "Final de música de recuerdo",
       "lights": "Azul/rojo de inspector; seguidores en estudiante y Armando",
-      "stage": "Fondo Escuela; estudiante con pupitre a la derecha",
+      "stage": "Fondo Escuela directora; estudiante con pupitre a la derecha",
       "actors": "Armando entra por la derecha"
     },
     {
@@ -318,7 +318,7 @@
       "cue": "Suena el timbre de clases",
       "sound": "Timbre escolar",
       "lights": "Sube luz ambiente general",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Estudiante 1 sale por la derecha y los demás alumnos también"
     },
     {
@@ -358,7 +358,7 @@
       "cue": "Karin anuncia el viaje y se retira",
       "sound": "",
       "lights": "Baja escenario; mantiene proscenio",
-      "stage": "Cerrar telón; bajar ciclorama con imagen de hospital",
+      "stage": "Pasar la silla de ruedas antes de que baje el ciclorama; cerrar telón; bajar ciclorama con imagen de hospital",
       "actors": "Karin sale por la derecha; Armando pasa al proscenio"
     },
     {
@@ -408,7 +408,7 @@
       "cue": "Cecilia empieza: «Todo pasó un día…»",
       "sound": "Efecto «Érase una vez»",
       "lights": "Blackout",
-      "stage": "Abrir telón a Recámara (escenario 3)",
+      "stage": "Levantar ciclorama y al mismo tiempo abrir la Recámara (E2)",
       "actors": "Armando y Cecilia salen por la izquierda para cambiarse"
     },
     {
@@ -488,7 +488,7 @@
       "cue": "Termina el impacto",
       "sound": "Efecto se corta",
       "lights": "Blackout",
-      "stage": "Bajar telón; desmontar recámara y preparar escuela nuevamente",
+      "stage": "Bajar telón; desmontar recámara y preparar Escuela directora nuevamente",
       "actors": "KD y Cecilia ocultos tras telón"
     },
     {
@@ -508,7 +508,7 @@
       "cue": "Armando: «Te espero mañana en mi oficina»",
       "sound": "Finalizar audio",
       "lights": "Blackout",
-      "stage": "Preparar proyección",
+      "stage": "Sacar toda la escenografía; preparar proyección",
       "actors": ""
     },
     {
@@ -578,7 +578,7 @@
       "cue": "Aguafiestas ve el cheque: «¡Qué hijue…!»",
       "sound": "Efecto Yuri: «OEEE»",
       "lights": "Blackout inmediato al remate",
-      "stage": "Preparar escuela",
+      "stage": "No hacer nada con la escenografía",
       "actors": "Angelitos y Cizaña quedan al centro"
     },
     {
@@ -588,7 +588,7 @@
       "cue": "Termina el blackout",
       "sound": "Empieza con canción española",
       "lights": "Colores + estrellas en movimiento",
-      "stage": "Abrir telón; Fondo Escuela; trofeo al lado izquierdo",
+      "stage": "Abrir telón; Fondo Escuela directora; trofeo al lado izquierdo",
       "actors": "Alumnos"
     },
     {
@@ -598,7 +598,7 @@
       "cue": "Suena el «olé» y la campana",
       "sound": "Olé + timbre de clases",
       "lights": "Luz general de escenario",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Cynthia entra por la izquierda"
     },
     {
@@ -608,7 +608,7 @@
       "cue": "Cynthia: «¡Cada uno a su clase!»",
       "sound": "",
       "lights": "General",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Corre a los alumnos y ellos se van al otro lado por atrás a prepararse para su escena"
     },
     {
@@ -628,7 +628,7 @@
       "cue": "Cynthia termina: «Yo solo digo»",
       "sound": "Timbre de clases de nuevo",
       "lights": "Regresa general",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Cynthia sale por la izquierda y al salir el timbre, entran alumnos preparados para su escena"
     },
     {
@@ -638,7 +638,7 @@
       "cue": "Galán queda solo en el aula",
       "sound": "My Way · a capela · 00:15",
       "lights": "Seguidor sobre Galán",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Paula entra por la izquierda"
     },
     {
@@ -648,7 +648,7 @@
       "cue": "Galán: «Usted me provoca»",
       "sound": "Provócame · Chayanne · 00:53–01:22",
       "lights": "Estrellas + colores",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Galán canta; bailarinas detrás"
     },
     {
@@ -658,7 +658,7 @@
       "cue": "Termina «Provócame»",
       "sound": "Corte de pista. Paulita habla con público.",
       "lights": "General de aula",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Bailarinas despejan"
     },
     {
@@ -668,7 +668,7 @@
       "cue": "Cynthia: «Buenas, buenasss»",
       "sound": "",
       "lights": "General",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Cynthia reentra por la izquierda"
     },
     {
@@ -678,7 +678,7 @@
       "cue": "«Solo estamos ensayando»",
       "sound": "Galán y amiga cantan a capella",
       "lights": "Cenital sobre chicos mientras cantan",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Se regresa la amiga atrás de telón y se despide de Paula y quedan solo los 2 cuando Cynthia se va sospechando"
     },
     {
@@ -688,7 +688,7 @@
       "cue": "Cynthia: «Así los quería ver, ajá»",
       "sound": "",
       "lights": "Mantener",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Cynthia cruza y sale victoriosa por la derecha"
     },
     {
@@ -698,7 +698,7 @@
       "cue": "Galán: «Usted es mi sol»",
       "sound": "O Sole Mio · a capela",
       "lights": "Rojo romántico + seguidor a la pareja",
-      "stage": "Escuela",
+      "stage": "Escuela directora",
       "actors": "Paula y Galán"
     },
     {
@@ -708,7 +708,7 @@
       "cue": "Paula: «Vamos a tomar aire fresco»",
       "sound": "",
       "lights": "Fade a blackout",
-      "stage": "Cerrar telón / despejar escuela",
+      "stage": "Cerrar telón (no despejar la Escuela directora)",
       "actors": "Paula toma a Galán; ambos salen por la izquierda"
     },
     {
@@ -768,7 +768,7 @@
       "cue": "Termina la salsa",
       "sound": "Corte de pista + sonido de novela romántica",
       "lights": "Pantalla/ciclorama visible",
-      "stage": "Fondo o proyección Parque de noche",
+      "stage": "Escena de parque de noche: fondo o proyección Parque de noche",
       "actors": "Tres despedidas; Cynthia sale por la izquierda"
     },
     {
@@ -838,7 +838,7 @@
       "cue": "Pata Pata: «Vamos por el sánduche»",
       "sound": "",
       "lights": "Bajar luz de transición",
-      "stage": "Levantar ciclorama; revelar Escenario 2",
+      "stage": "Levantar ciclorama; revelar Escenario 2; antes del pie 84: guardar el sofá y poner la mesa con el trofeo en el proscenio izquierdo",
       "actors": "Pata Pata y Mudo salen izquierda; Lucho sale derecha"
     },
     {
@@ -848,7 +848,7 @@
       "cue": "Inicia llamada Armando–Lucho",
       "sound": "Voces en off / efecto de teléfono",
       "lights": "Escena en penumbra",
-      "stage": "Escenario 2: aula vacía con trofeo, lámpara derecha, mesa en medio y cortina izquierda",
+      "stage": "Escenario 2: aula vacía con trofeo, lámpara izquierda, mesa en medio y cortina derecha",
       "actors": "Tres ladrones listos para entrar"
     },
     {
@@ -858,7 +858,7 @@
       "cue": "Lucho: «Si le contara…»",
       "sound": "Efecto de recuerdo + Pantera Rosa · 00:00–01:16",
       "lights": "Luz de sigilo",
-      "stage": "Escenario 2: aula vacía con trofeo, lámpara derecha, mesa en medio y cortina izquierda",
+      "stage": "Escenario 2: aula vacía con trofeo, lámpara izquierda, mesa en medio y cortina derecha",
       "actors": "Los tres ladrones entran en fila"
     },
     {
@@ -868,7 +868,7 @@
       "cue": "Los tres chocan y caen",
       "sound": "Mantener Pantera Rosa",
       "lights": "Mantener sigilo",
-      "stage": "Escenario 2: aula vacía con trofeo, lámpara derecha, mesa en medio y cortina izquierda",
+      "stage": "Escenario 2: aula vacía con trofeo, lámpara izquierda, mesa en medio y cortina derecha",
       "actors": "Ladrones se levantan y hacen mímica"
     },
     {
@@ -878,7 +878,7 @@
       "cue": "Lucho intenta tomar el trofeo y cuando está cerca",
       "sound": "",
       "lights": "Acento sobre el trofeo",
-      "stage": "Escenario 2: aula vacía con trofeo, lámpara derecha, mesa en medio y cortina izquierda",
+      "stage": "Escenario 2: aula vacía con trofeo, lámpara izquierda, mesa en medio y cortina derecha",
       "actors": "Los tres admiran el trofeo"
     },
     {
@@ -918,7 +918,7 @@
       "cue": "La guardia abandona el lugar",
       "sound": "",
       "lights": "Fade a blackout",
-      "stage": "Aula queda vacía y sin trofeo",
+      "stage": "Sacar el trofeo de escena (ya se lo robaron); aula queda vacía",
       "actors": "Los tres ladrones salen por la derecha con el trofeo"
     },
     {
@@ -1018,7 +1018,7 @@
       "cue": "Cecilia ordena a Pata Pata levantar las manos",
       "sound": "",
       "lights": "Medio foco fucsia sobre Pata Pata",
-      "stage": "Proscenio",
+      "stage": "Proscenio; limpiar todos los billetes que quedaron botados",
       "actors": "Pata Pata realiza el gag de la cojera"
     },
     {
@@ -1048,7 +1048,7 @@
       "cue": "Cecilia: «Queda usted detenido»",
       "sound": "Sirena corta de salida",
       "lights": "Blackout",
-      "stage": "Escuela debe quedar lista detrás del telón",
+      "stage": "Escuela directora debe quedar lista detrás del telón",
       "actors": "Todos quedan escoltados durante el oscuro"
     },
     {
@@ -1058,7 +1058,7 @@
       "cue": "Sube la luz después de la captura",
       "sound": "",
       "lights": "Luz cálida de proscenio",
-      "stage": "Proscenio; escuela en paz detrás",
+      "stage": "Proscenio; Escuela directora en paz detrás",
       "actors": "Karin y Padre Jorge entran por la izquierda"
     },
     {
@@ -1188,7 +1188,7 @@
       "cue": "Karin y Paulita toman el centro",
       "sound": "",
       "lights": "Frontal completo",
-      "stage": "Proscenio o escenario despejado",
+      "stage": "Abrir telón; escenario despejado",
       "actors": "Karin y Paulita entran por la izquierda"
     },
     {
@@ -1218,7 +1218,7 @@
       "cue": "Termina la última canción",
       "sound": "Corte/fade final + aplausos",
       "lights": "Sube luz general de despedida",
-      "stage": "Los Padrecitos no salen",
+      "stage": "Sacar la mesa y la cortina: escenario queda limpio; Los Padrecitos no salen",
       "actors": "Cantantes y dobles se colocan en laterales"
     },
     {
