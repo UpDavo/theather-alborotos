@@ -119,7 +119,6 @@ export function TheaterPath() {
     }
   };
 
-  const progress = ((index + 1) / CUES.length) * 100;
   const cast = presence(index);
   const actors = actorLines(index);
   // Cada vista muestra siempre sus áreas (las que solo mantienen, atenuadas).
@@ -128,36 +127,7 @@ export function TheaterPath() {
 
   return (
     <div className="flex h-dvh flex-col gap-3 overflow-hidden px-4 pt-[max(env(safe-area-inset-top),12px)] pb-[max(env(safe-area-inset-bottom),12px)] select-none md:px-6">
-      <header className="flex items-center gap-3">
-        <h1 className="truncate text-base font-bold tracking-tight">{TITLE}</h1>
-        <span className="text-sm whitespace-nowrap text-white/45 tabular-nums">
-          Pie {index + 1}/{CUES.length} · {Math.round(progress)}%
-        </span>
-        <div className="ml-auto flex items-center gap-2">
-          <button type="button" onClick={() => setMicOpen(true)} className={chip(false, "h-10")}>
-            🎤 Micrófonos
-          </button>
-          <button type="button" onClick={() => setNotesOpen(true)} className={chip(false, "h-10")}>
-            📝 Notas
-            {noteCount > 0 && (
-              <span className="rounded-full bg-yellow-300 px-1.5 text-xs font-bold text-neutral-900 tabular-nums">{noteCount}</span>
-            )}
-          </button>
-          <button type="button" onClick={() => setDrawer(true)} className={chip(false, "h-10")}>
-            <ListIcon className="size-5" /> Libreto
-          </button>
-          <button
-            type="button"
-            aria-label="Reiniciar función"
-            onClick={() => {
-              if (window.confirm("¿Volver al inicio de la obra?")) go(0);
-            }}
-            className={chip(false, "h-10 px-3")}
-          >
-            <RestartIcon className="size-5" />
-          </button>
-        </div>
-      </header>
+      <h1 className="sr-only">{TITLE}</h1>
 
       <Timeline index={index} onJump={go} />
 
@@ -175,27 +145,14 @@ export function TheaterPath() {
                 <span className="text-[9px] font-bold tracking-widest uppercase opacity-60">Pie</span>
                 <span className="text-2xl leading-none font-black tabular-nums">{cue.num}</span>
               </div>
-              <div className="min-w-0">
-                <p className="text-xs font-bold tracking-[0.2em] text-white/45 uppercase">
-                  {scene.kicker}
-                  <span className="ml-2 tracking-normal text-white/30 normal-case">
-                    {index - scene.start + 1} de {scene.end - scene.start + 1}
-                  </span>
-                </p>
-                <h2 className="truncate text-xl font-bold tracking-tight">{scene.name}</h2>
-              </div>
-            </div>
-
-            <div>
-              <p className="mb-1 text-xs font-bold tracking-[0.2em] text-emerald-300 uppercase">Cuándo</p>
-              <p className="text-3xl leading-tight font-bold text-balance lg:text-5xl">{cue.cue}</p>
+              <h2 className="min-w-0 truncate text-3xl font-bold tracking-tight">{scene.name}</h2>
               <button
                 type="button"
                 onPointerDown={(e) => e.stopPropagation()}
                 onPointerUp={(e) => e.stopPropagation()}
                 onClick={() => editNote()}
                 className={cn(
-                  "mt-3 flex max-w-full items-start gap-2 rounded-2xl px-3 py-2 text-left text-base",
+                  "ml-auto flex max-w-[50%] shrink-0 items-start gap-2 rounded-2xl px-3 py-2 text-left text-base",
                   notes[cue.num] ? "bg-yellow-300 text-neutral-900" : "border border-dashed border-white/20 text-white/45",
                 )}
               >
@@ -203,6 +160,8 @@ export function TheaterPath() {
                 <span className="whitespace-pre-wrap">{notes[cue.num] ?? "Agregar nota"}</span>
               </button>
             </div>
+
+            <p className="text-3xl leading-tight font-bold text-balance lg:text-5xl">{cue.cue}</p>
 
             {view === "stage" ? (
               <div className="flex min-h-0 flex-1 gap-4">
@@ -241,9 +200,34 @@ export function TheaterPath() {
                 const d = DEPTS.find((x) => x.key === k)!;
                 return <Icon key={k} className={cn("size-5", view === v.key ? "" : d.accent)} />;
               })}
-              <span className="hidden md:inline">{v.label}</span>
+              <span className="hidden whitespace-nowrap md:inline">{v.label}</span>
             </RoleChip>
           ))}
+        </div>
+
+        <div className="ml-auto flex items-center gap-2">
+          <button type="button" onClick={() => setMicOpen(true)} className={chip(false, "h-14")}>
+            Micrófonos
+          </button>
+          <button type="button" onClick={() => setNotesOpen(true)} className={chip(false, "h-14")}>
+            Notas
+            {noteCount > 0 && (
+              <span className="rounded-full bg-yellow-300 px-1.5 text-xs font-bold text-neutral-900 tabular-nums">{noteCount}</span>
+            )}
+          </button>
+          <button type="button" onClick={() => setDrawer(true)} className={chip(false, "h-14")}>
+            <ListIcon className="size-5" /> Libreto
+          </button>
+          <button
+            type="button"
+            aria-label="Reiniciar función"
+            onClick={() => {
+              if (window.confirm("¿Volver al inicio de la obra?")) go(0);
+            }}
+            className={chip(false, "h-14 px-4")}
+          >
+            <RestartIcon className="size-5" />
+          </button>
         </div>
 
         <button
@@ -251,7 +235,7 @@ export function TheaterPath() {
           onClick={goPrev}
           disabled={index === 0}
           aria-label="Pie anterior"
-          className="ml-auto flex h-16 w-20 items-center justify-center rounded-full border border-white/10 bg-neutral-800/70 active:scale-95 disabled:opacity-30"
+          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-white/10 bg-neutral-800/70 active:scale-95 disabled:opacity-30"
         >
           <ChevronLeft className="size-8" />
         </button>
@@ -320,23 +304,18 @@ function UpNext({
   }
 
   return (
-    <div className="flex flex-col gap-3 rounded-[24px] border border-white/10 bg-neutral-800/40 p-4">
-      <div className="flex items-center gap-2">
-        <span className="text-xs font-bold tracking-[0.2em] text-white/50 uppercase">
-          Siguiente · {next.num}
-        </span>
-        {sceneChanges && (
-          <span className="ml-auto rounded-full bg-emerald-400 px-2.5 py-0.5 text-[11px] font-bold text-neutral-900 uppercase">
-            Cambio de escena
-          </span>
-        )}
-      </div>
+    <div className="flex flex-col gap-3 rounded-[24px] border border-white/20 bg-neutral-800/60 p-5">
       {sceneChanges && (
-        <p className="text-sm font-semibold text-emerald-300">
-          {nextScene.block}
+        <span className="self-start rounded-full bg-emerald-400 px-2.5 py-0.5 text-[11px] font-bold text-neutral-900 uppercase">
+          Cambio de escena
+        </span>
+      )}
+      {sceneChanges && (
+        <p className="text-base font-bold text-emerald-300 uppercase">
+          {nextScene.name}
         </p>
       )}
-      <p className="text-lg leading-snug font-semibold">{next.cue}</p>
+      <p className="text-2xl leading-snug font-bold">{next.cue}</p>
 
       <ul className="flex flex-col gap-1.5">
         {depts.map((d) => {
@@ -344,9 +323,9 @@ function UpNext({
           if (s.kind !== "action") return null;
           const Icon = DEPT_ICON[d.key];
           return (
-            <li key={d.key} className="flex gap-2 text-sm">
-              <Icon className={cn("mt-0.5 size-4 shrink-0", d.accent)} />
-              <span className="line-clamp-2 text-white/75">{actionText(index + 1, d.key, mics)}</span>
+            <li key={d.key} className="flex gap-2 text-base">
+              <Icon className={cn("mt-1 size-5 shrink-0", d.accent)} />
+              <span className="line-clamp-3 text-white/85">{actionText(index + 1, d.key, mics)}</span>
             </li>
           );
         })}
@@ -383,9 +362,9 @@ function StageHint({ dept, state }: { dept: (typeof DEPTS)[number]; state: Retur
   const Icon = DEPT_ICON[dept.key];
   const action = state.kind === "action";
   return (
-    <div className={cn("flex items-start gap-2 rounded-2xl border px-3 py-2", action ? cn(dept.soft, dept.ring) : "border-white/10 bg-neutral-800/50")}>
-      <Icon className={cn("mt-0.5 size-5 shrink-0", action ? dept.accent : "text-white/40")} />
-      <p className={cn("text-lg leading-snug", action ? "font-semibold text-white" : "text-white/45")}>
+    <div className={cn("flex flex-1 items-start gap-3 rounded-2xl border p-4", action ? cn(dept.soft, dept.ring) : "border-white/10 bg-neutral-800/50")}>
+      <Icon className={cn("mt-1 size-6 shrink-0", action ? dept.accent : "text-white/40")} />
+      <p className={cn("text-xl leading-snug", action ? "font-semibold text-white" : "text-white/45")}>
         {state.text || "Sin cambio"}
         {!action && <span className="ml-2 text-xs font-bold tracking-wide text-white/40 uppercase">Mantener</span>}
       </p>

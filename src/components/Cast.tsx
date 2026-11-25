@@ -62,7 +62,7 @@ export function ActorsCard({
   onEditMic?: (name: string) => void;
 }) {
   return (
-    <div className="flex flex-col gap-2.5 rounded-[24px] border border-rose-400/40 bg-rose-500/10 p-4">
+    <div className="flex min-h-0 flex-1 flex-col gap-2.5 overflow-y-auto rounded-[24px] border border-rose-400/40 bg-rose-500/10 p-4">
       <p className="text-xs font-bold tracking-[0.2em] text-rose-300 uppercase">Actores</p>
       {general.map((g) => (
         <p key={g} className="text-sm leading-snug text-white/75">

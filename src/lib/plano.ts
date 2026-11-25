@@ -117,9 +117,9 @@ const KEYFRAMES: Record<string, Plan> = {
   "70": { telon: "ciclorama", items: PARQUE },
   // Parque de día / noche proyectado; el aula del robo se arma detrás.
   "71": { telon: "ciclorama", items: [...AULA_ROBO, ...PARQUE] },
-  // Garaje de ladrones: la silla de Lucho ya está a la derecha.
-  "78": { telon: "ciclorama", items: [...AULA_ROBO, ...PARQUE, SILLA_LUCHO] },
-  // Blackout: vuelve el trofeo, salen banco, mesita y silla; sube el ciclorama con el flashback.
+  // Garaje de ladrones: sale la mesita con sombrerito; la silla de Lucho ya está a la derecha.
+  "78": { telon: "ciclorama", items: [...AULA_ROBO, BANCO, SILLA_LUCHO] },
+  // Blackout: vuelve el trofeo, salen banco y silla; sube el ciclorama con el flashback.
   "83": { telon: "abierto", items: [...AULA_ROBO, ...MESA_TROFEO] },
   // Blackout: se van con el trofeo y baja el ciclorama (llamada, piscina, policía).
   "91": { telon: "ciclorama", items: AULA_ROBO },

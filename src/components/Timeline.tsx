@@ -1,5 +1,5 @@
 import { cn } from "@/lib/cn";
-import { ACTS, TRAMAS, actOf, type Trama } from "@/lib/libreto";
+import { ACTS, TRAMAS, actOf } from "@/lib/libreto";
 
 interface TimelineProps {
   index: number;
@@ -9,7 +9,6 @@ interface TimelineProps {
 /** Barra por actos: ancho según cantidad de pies, color y emoji según la trama. */
 export function Timeline({ index, onJump }: TimelineProps) {
   const current = actOf(index);
-  const used = [...new Set(ACTS.map((a) => a.trama))] as Trama[];
 
   return (
     <div className="flex flex-col gap-1.5">
@@ -47,19 +46,6 @@ export function Timeline({ index, onJump }: TimelineProps) {
         })}
       </div>
 
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/50">
-        <span className="font-semibold text-white/80">
-          Ahora: {TRAMAS[current.trama].emoji} {current.label}
-        </span>
-        <span className="ml-auto flex flex-wrap gap-x-3">
-          {used.map((k) => (
-            <span key={k} className="flex items-center gap-1">
-              <span className={cn("size-2.5 rounded-sm", TRAMAS[k].bar)} />
-              {TRAMAS[k].label}
-            </span>
-          ))}
-        </span>
-      </div>
     </div>
   );
 }

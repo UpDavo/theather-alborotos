@@ -788,7 +788,7 @@
       "cue": "Termina el blackout",
       "sound": "Sonido de ladrones chismeando (Yuri); BONG cuando Lucho se sienta",
       "lights": "Todas las luces apagadas hasta que los ladrones salen al banquito; luego general baja + medio foco fucsia para Pata Pata",
-      "stage": "Proyección «VARIOS DÍAS DESPUÉS», luego proyección del garaje de ladrones; Pata Pata y Mudo en el banquito a la izquierda; la silla de Lucho ya colocada a la derecha (chiste: se sienta y suena BONG)",
+      "stage": "Quitar la mesita con sombrerito en el blackout. Proyección «VARIOS DÍAS DESPUÉS», luego proyección del garaje de ladrones; Pata Pata y Mudo en el banquito a la izquierda; la silla de Lucho ya colocada a la derecha (chiste: se sienta y suena BONG)",
       "actors": "Lucho entra para la reunión; libreta, linterna, armas y pasamontañas, silla a la derecha"
     },
     {
@@ -838,7 +838,7 @@
       "cue": "Pata Pata: «Vamos por el sánduche»",
       "sound": "Audio: «¿Y pudiste robar?» «Sí jefe, sí, súper… estos manes son una hue… OEEE… si le contara» + sonido de FLASHBACK",
       "lights": "Blackout cuando se van los ladrones",
-      "stage": "BLACKOUT: el trofeo vuelve a salir a la izquierda; quitar el banquito y la mesita del sombrerito; con el sonido de flashback subir el ciclorama y mostrar el Escenario 2",
+      "stage": "BLACKOUT: el trofeo vuelve a salir a la izquierda; quitar el banquito; con el sonido de flashback subir el ciclorama y mostrar el Escenario 2",
       "actors": "Pata Pata y Mudo salen izquierda; Lucho sale derecha"
     },
     {
