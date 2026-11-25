@@ -46,7 +46,7 @@ const RECAMARA: PlanItem[] = [
   { kind: "colchon", x: 795, y: 170, w: 80, h: 43, label: "Colchón" },
 ];
 
-/* Mesa con el trofeo en la esquina izquierda del proscenio, pies 61–69. */
+/* Mesa con el trofeo en la esquina izquierda del proscenio, a la vista del público. */
 const MESA_TROFEO: PlanItem[] = [
   { kind: "mesa", x: 122, y: 488, w: 110, h: 50, label: "Mesa con trofeo", labelAt: "below" },
   { kind: "trofeo", x: 177, y: 513 },
@@ -60,9 +60,12 @@ const AULA_ROBO: PlanItem[] = [
   { kind: "cortina", x1: 672, y1: 299, x2: 858, y2: 328, label: "Cortina" },
 ];
 
-/* Parque en el proscenio, pies 71–77: sofá a la izquierda, porta sombrero a la derecha. */
-const SOFA: PlanItem = { kind: "sofa", x: 114, y: 492, w: 156, h: 56, label: "Sofá", labelAt: "below" };
-const PARQUE: PlanItem[] = [SOFA, { kind: "colgador", x: 817, y: 542, label: "Porta sombrero", labelAt: "below" }];
+/* Parque en el proscenio, pies 70–82: banco (Cynthia) a la izquierda, mesita con sombrerito (salsa) a la derecha. */
+const BANCO: PlanItem = { kind: "sofa", x: 114, y: 492, w: 156, h: 56, label: "Banco", labelAt: "below" };
+const MESITA: PlanItem = { kind: "colgador", x: 817, y: 542, label: "Mesita con sombrerito", labelAt: "below" };
+const PARQUE: PlanItem[] = [BANCO, MESITA];
+/* Silla de Lucho a la derecha del proscenio (chiste del BONG), pies 78–82. */
+const SILLA_LUCHO: PlanItem = { kind: "silla", x: 660, y: 545, label: "Silla Lucho", labelAt: "below" };
 
 /* E1, pies 92–106: cortina inclinada a la izquierda, silla y mesa a la derecha. */
 const E1_CAPTURA: PlanItem[] = [
@@ -98,34 +101,38 @@ const KEYFRAMES: Record<string, Plan> = {
   "27": { telon: "cerrado", items: ESCUELA_DIRECTORA },
   "29": { telon: "abierto", items: ESCUELA_DIRECTORA },
   "30": { telon: "abierto", items: [...ESCUELA_DIRECTORA, ...RECAMARA] },
-  "36": { telon: "cerrado", items: [...ESCUELA_DIRECTORA, ...RECAMARA] },
+  // Baja el ciclorama con la imagen del hospital (no telón).
+  "36": { telon: "ciclorama", items: [...ESCUELA_DIRECTORA, ...RECAMARA] },
   // Ciclorama con proyección del hospital (no telón).
   "37": { telon: "ciclorama", items: [...ESCUELA_DIRECTORA, ...RECAMARA] },
   "38": { telon: "ciclorama", items: RECAMARA },
   // Se levanta el ciclorama y al mismo tiempo se abre E2 (Recámara).
   "41": { telon: "abierto", e2: "abierto", items: RECAMARA },
   "49": { telon: "cerrado", e2: "abierto", items: RECAMARA },
-  "50": { telon: "cerrado", items: [] },
-  "59": { telon: "abierto", items: [] },
-  "61": { telon: "abierto", items: MESA_TROFEO },
-  // Se saca la mesa con el trofeo.
-  "70": { telon: "cerrado", items: [] },
-  // Aula del robo armada detrás.
-  "71": { telon: "cerrado", items: [...AULA_ROBO, ...PARQUE] },
-  // Se retira el porta sombrero; el sofá sigue hasta el 83.
-  "78": { telon: "cerrado", items: [...AULA_ROBO, SOFA] },
-  // «Levantar ciclorama; revelar Escenario 2».
-  "83": { telon: "abierto", items: [...AULA_ROBO, SOFA] },
-  // Se retira el sofá y recién aquí se pone el trofeo en su mesa del proscenio.
-  "84": { telon: "abierto", items: [...AULA_ROBO, ...MESA_TROFEO] },
-  // Los ladrones se llevan el trofeo.
-  "91": { telon: "abierto", items: AULA_ROBO },
-  "92": { telon: "cerrado", items: E1_CAPTURA },
+  // Blackout: baja el ciclorama (voces en off, noticiero, foto de comisaría).
+  "50": { telon: "ciclorama", items: [] },
+  // En el blackout del 58 sale el trofeo; la escuela abre con el trofeo cerca del público.
+  "59": { telon: "abierto", items: MESA_TROFEO },
+  // Antes de bajar el ciclorama: banco y mesita al proscenio, se quita el trofeo.
+  "70": { telon: "ciclorama", items: PARQUE },
+  // Parque de día / noche proyectado; el aula del robo se arma detrás.
+  "71": { telon: "ciclorama", items: [...AULA_ROBO, ...PARQUE] },
+  // Garaje de ladrones: la silla de Lucho ya está a la derecha.
+  "78": { telon: "ciclorama", items: [...AULA_ROBO, ...PARQUE, SILLA_LUCHO] },
+  // Blackout: vuelve el trofeo, salen banco, mesita y silla; sube el ciclorama con el flashback.
+  "83": { telon: "abierto", items: [...AULA_ROBO, ...MESA_TROFEO] },
+  // Blackout: se van con el trofeo y baja el ciclorama (llamada, piscina, policía).
+  "91": { telon: "ciclorama", items: AULA_ROBO },
+  "92": { telon: "ciclorama", items: E1_CAPTURA },
+  "97": { telon: "cerrado", items: E1_CAPTURA },
+  // Se abre el telón: Escenario 2, escena de Karin y Padre Jorge.
   "105": { telon: "abierto", items: E1_CAPTURA },
-  // Pendiente de dibujar desde aquí.
-  "107": { telon: "cerrado", items: [] },
-  // Se abre el telón con el escenario despejado (no en proscenio).
-  "120": { telon: "abierto", items: [] },
+  // Ciclorama: video de la cárcel, fondo del patio con la iglesia (109–115), video del Padre (116).
+  "107": { telon: "ciclorama", items: [] },
+  // Proscenio con telón de boca cerrado: Paula y Karin presentan a Los Padrecitos.
+  "120": { telon: "cerrado", items: [] },
+  // Se abre el telón al Escenario 2 despejado; queda abierto hasta la despedida.
+  "121": { telon: "abierto", items: [] },
   "135": { telon: "cerrado", items: [] },
 };
 

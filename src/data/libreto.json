@@ -358,7 +358,7 @@
       "cue": "Karin anuncia el viaje y se retira",
       "sound": "",
       "lights": "Baja escenario; mantiene proscenio",
-      "stage": "Pasar la silla de ruedas antes de que baje el ciclorama; cerrar telón; bajar ciclorama con imagen de hospital",
+      "stage": "Pasar la silla de ruedas antes de que baje el ciclorama; bajar ciclorama con imagen de hospital",
       "actors": "Karin sale por la derecha; Armando pasa al proscenio"
     },
     {
@@ -368,7 +368,7 @@
       "cue": "Armando: «Cynthia es mi aliada»",
       "sound": "",
       "lights": "Seguidor o frontal sobre Armando",
-      "stage": "Telón cerrado / hospital preparado",
+      "stage": "Ciclorama abajo / hospital proyectado",
       "actors": "Armando solo con celular"
     },
     {
@@ -495,10 +495,10 @@
       "id": 49,
       "num": "50",
       "block": "ESCENA 6 · VOCES EN OFF",
-      "cue": "Telón queda cerrado",
+      "cue": "Ciclorama queda abajo",
       "sound": "Voces grabadas de Armando y Cecilia “150 libras”",
-      "lights": "Oscuro / luz mínima de transición",
-      "stage": "Proscenio vacío",
+      "lights": "Blackout",
+      "stage": "Blackout; bajar ciclorama mientras suenan las voces de Ceci y Armando («150 libras… te espero en la oficina»)",
       "actors": "Sin actores visibles"
     },
     {
@@ -508,7 +508,7 @@
       "cue": "Armando: «Te espero mañana en mi oficina»",
       "sound": "Finalizar audio",
       "lights": "Blackout",
-      "stage": "Sacar toda la escenografía; preparar proyección",
+      "stage": "Ciclorama listo para proyectar noticiero; sacar toda la escenografía",
       "actors": ""
     },
     {
@@ -518,7 +518,7 @@
       "cue": "Blackout completo",
       "sound": "Video Noticiero Teleportazos · 01:00",
       "lights": "Sala y escenario oscuros",
-      "stage": "Pantalla/ciclorama visible",
+      "stage": "Proyección del noticiero en el ciclorama",
       "actors": "Armando listo a la derecha"
     },
     {
@@ -528,7 +528,7 @@
       "cue": "Termina el noticiero",
       "sound": "Entrada Inspector Gadget hasta que empieza hablar NOONONO",
       "lights": "Seguidor sobre Armando",
-      "stage": "Proscenio",
+      "stage": "Ciclorama con foto de comisaría (escena angelito y diablito)",
       "actors": "Armando entra por la derecha"
     },
     {
@@ -578,7 +578,7 @@
       "cue": "Aguafiestas ve el cheque: «¡Qué hijue…!»",
       "sound": "Efecto Yuri: «OEEE»",
       "lights": "Blackout inmediato al remate",
-      "stage": "No hacer nada con la escenografía",
+      "stage": "No hacer nada con la escenografía; en el blackout sacar el trofeo (listo donde Yuri) al proscenio izquierdo",
       "actors": "Angelitos y Cizaña quedan al centro"
     },
     {
@@ -588,7 +588,7 @@
       "cue": "Termina el blackout",
       "sound": "Empieza con canción española",
       "lights": "Colores + estrellas en movimiento",
-      "stage": "Abrir telón; Fondo Escuela directora; trofeo al lado izquierdo",
+      "stage": "Levantar ciclorama; Fondo Escuela directora; trofeo en proscenio izquierdo, cerca del público",
       "actors": "Alumnos"
     },
     {
@@ -598,7 +598,7 @@
       "cue": "Suena el «olé» y la campana",
       "sound": "Olé + timbre de clases",
       "lights": "Luz general de escenario",
-      "stage": "Escuela directora",
+      "stage": "Trofeo a vista del público en el proscenio izquierdo, mirando al frente; escenario de la escuela despejado",
       "actors": "Cynthia entra por la izquierda"
     },
     {
@@ -708,18 +708,18 @@
       "cue": "Paula: «Vamos a tomar aire fresco»",
       "sound": "",
       "lights": "Fade a blackout",
-      "stage": "Cerrar telón (no despejar la Escuela directora)",
+      "stage": "Bajar ciclorama (proyección Parque de día). Antes de que baje: sacar el banco para Cynthia a la izquierda, la mesita con el sombrerito de la salsa a la derecha y QUITAR EL TROFEO",
       "actors": "Paula toma a Galán; ambos salen por la izquierda"
     },
     {
       "id": 71,
       "num": "71",
       "block": "ESCENA 9 · PLAN DEL ROBO",
-      "cue": "Telón queda cerrado",
+      "cue": "Ciclorama queda abajo",
       "sound": "",
       "lights": "Pantalla/ciclorama visible",
-      "stage": "Fondo o proyección Parque de día",
-      "actors": "Armando entra por izquierda; Lucho entra derecha, ya está el banquito a la izquierda y el colgador de sombrero a la derecha"
+      "stage": "Ciclorama abajo: proyección Parque de día; banco a la izquierda y mesita con sombrerito a la derecha",
+      "actors": "Armando entra por la izquierda; Lucho entra por la derecha directo a preguntar «¿Y entonces? ¿Podrás robar el trofeo?»"
     },
     {
       "id": 72,
@@ -728,7 +728,7 @@
       "cue": "Armando y Lucho comienzan a hablar",
       "sound": "",
       "lights": "Luz en Armando y Lucho",
-      "stage": "Proscenio",
+      "stage": "Ciclorama abajo: proyección Parque de día",
       "actors": "Cynthia espera poco visible al fondo izquierdo"
     },
     {
@@ -738,7 +738,7 @@
       "cue": "Armando: «Mientras yo controle la investigación…»",
       "sound": "",
       "lights": "Encender todo el proscenio",
-      "stage": "Proscenio",
+      "stage": "Ciclorama abajo: proyección Parque de día",
       "actors": "Armando presenta a Cinthya de lejos, se revela a Cynthia haciendo mímicas"
     },
     {
@@ -748,7 +748,7 @@
       "cue": "Armando presenta a Cynthia: «Los dejo»",
       "sound": "",
       "lights": "Mantener",
-      "stage": "Proscenio",
+      "stage": "Ciclorama abajo: proyección Parque de día",
       "actors": "Armando sale por la derecha; Cynthia se acerca a Lucho"
     },
     {
@@ -758,7 +758,7 @@
       "cue": "Lucho: «Concédame este baile»",
       "sound": "Llorarás · 00:00–00:45",
       "lights": "Movimiento de colores",
-      "stage": "Proscenio despejado",
+      "stage": "Cambia la proyección a Parque de noche; empieza la salsa",
       "actors": "Cynthia y Lucho bailan salsa"
     },
     {
@@ -768,7 +768,7 @@
       "cue": "Termina la salsa",
       "sound": "Corte de pista + sonido de novela romántica",
       "lights": "Pantalla/ciclorama visible",
-      "stage": "Escena de parque de noche: fondo o proyección Parque de noche",
+      "stage": "Proyección Parque de noche",
       "actors": "Tres despedidas; Cynthia sale por la izquierda"
     },
     {
@@ -778,7 +778,7 @@
       "cue": "Lucho se seca el sudor y anuncia la reunión",
       "sound": "",
       "lights": "Fade a blackout",
-      "stage": "Fondo o proyección Parque de noche",
+      "stage": "Proyección Parque de noche",
       "actors": "Lucho sale por la derecha"
     },
     {
@@ -786,9 +786,9 @@
       "num": "78",
       "block": "ESCENA 12 · REUNIÓN LADRONES",
       "cue": "Termina el blackout",
-      "sound": "",
-      "lights": "General baja + medio foco fucsia para Pata Pata",
-      "stage": "Ciclorama proyección de garaje de ladrones; Pata Pata y Mudo sentados a la izquierda en el banquito",
+      "sound": "Sonido de ladrones chismeando (Yuri); BONG cuando Lucho se sienta",
+      "lights": "Todas las luces apagadas hasta que los ladrones salen al banquito; luego general baja + medio foco fucsia para Pata Pata",
+      "stage": "Proyección «VARIOS DÍAS DESPUÉS», luego proyección del garaje de ladrones; Pata Pata y Mudo en el banquito a la izquierda; la silla de Lucho ya colocada a la derecha (chiste: se sienta y suena BONG)",
       "actors": "Lucho entra para la reunión; libreta, linterna, armas y pasamontañas, silla a la derecha"
     },
     {
@@ -836,9 +836,9 @@
       "num": "83",
       "block": "ESCENA 12 · REUNIÓN LADRONES",
       "cue": "Pata Pata: «Vamos por el sánduche»",
-      "sound": "",
-      "lights": "Bajar luz de transición",
-      "stage": "Levantar ciclorama; revelar Escenario 2; antes del pie 84: guardar el sofá y poner la mesa con el trofeo en el proscenio izquierdo",
+      "sound": "Audio: «¿Y pudiste robar?» «Sí jefe, sí, súper… estos manes son una hue… OEEE… si le contara» + sonido de FLASHBACK",
+      "lights": "Blackout cuando se van los ladrones",
+      "stage": "BLACKOUT: el trofeo vuelve a salir a la izquierda; quitar el banquito y la mesita del sombrerito; con el sonido de flashback subir el ciclorama y mostrar el Escenario 2",
       "actors": "Pata Pata y Mudo salen izquierda; Lucho sale derecha"
     },
     {
@@ -846,9 +846,9 @@
       "num": "84",
       "block": "ESCENA 13 · ROBO DEL TROFEO",
       "cue": "Inicia llamada Armando–Lucho",
-      "sound": "Voces en off / efecto de teléfono",
+      "sound": "Pantera Rosa · 00:00–01:16 (empieza la escena)",
       "lights": "Escena en penumbra",
-      "stage": "Escenario 2: aula vacía con trofeo, lámpara izquierda, mesa en medio y cortina derecha",
+      "stage": "Trofeo en el proscenio izquierdo; Escenario 2: lámpara a la izquierda (Lucho), mesa en medio (Armando ladrón), cortina a la derecha (Pata Pata)",
       "actors": "Tres ladrones listos para entrar"
     },
     {
@@ -856,7 +856,7 @@
       "num": "85",
       "block": "ESCENA 13 · ROBO DEL TROFEO",
       "cue": "Lucho: «Si le contara…»",
-      "sound": "Efecto de recuerdo + Pantera Rosa · 00:00–01:16",
+      "sound": "Mantener Pantera Rosa",
       "lights": "Luz de sigilo",
       "stage": "Escenario 2: aula vacía con trofeo, lámpara izquierda, mesa en medio y cortina derecha",
       "actors": "Los tres ladrones entran en fila"
@@ -917,8 +917,8 @@
       "block": "ESCENA 13 · ROBO DEL TROFEO",
       "cue": "La guardia abandona el lugar",
       "sound": "",
-      "lights": "Fade a blackout",
-      "stage": "Sacar el trofeo de escena (ya se lo robaron); aula queda vacía",
+      "lights": "Blackout",
+      "stage": "Blackout; sacar el trofeo (ya se lo robaron); bajar el ciclorama",
       "actors": "Los tres ladrones salen por la derecha con el trofeo"
     },
     {
@@ -928,7 +928,7 @@
       "cue": "Armando voz en off: «¿Ya tienen el dinero?»",
       "sound": "Voz en off / llamada",
       "lights": "Luz de proscenio",
-      "stage": "Proscenio",
+      "stage": "Ciclorama abajo; voz en off de la llamada de Armando y Lucho: lo vendieron en el mercado negro",
       "actors": "Lucho al centro; Pata Pata y Cynthia según marcación"
     },
     {
@@ -938,7 +938,7 @@
       "cue": "Lucho: «En el mercado negro»",
       "sound": "Pausa para remate",
       "lights": "Mantener",
-      "stage": "Proscenio",
+      "stage": "Ciclorama abajo",
       "actors": "Lucho"
     },
     {
@@ -948,7 +948,7 @@
       "cue": "Lucho: «No, en Esmeraldas»",
       "sound": "Rimshot/«ba-dum-tss» (opcional)",
       "lights": "Blackout",
-      "stage": "Dejar escenario vacío para video",
+      "stage": "Ciclorama abajo; Lucho dice «¡A celebrar!» y sale la proyección de la piscina",
       "actors": "Lucho y Pata Pata salen derecha; Cynthia sale izquierda"
     },
     {
@@ -958,7 +958,7 @@
       "cue": "Blackout completo",
       "sound": "Video ladrones en piscina · 01:30",
       "lights": "Escenario y sala oscuros",
-      "stage": "Pantalla/ciclorama",
+      "stage": "Ciclorama: proyección de la piscina, ya celebrando",
       "actors": "Cecilia y banda listos para captura"
     },
     {
@@ -968,7 +968,7 @@
       "cue": "Video: «¿Pensaron que saldrían con la suya?»",
       "sound": "Sirenas · 00:07 y continúan en transición",
       "lights": "Rojo/azul de policía",
-      "stage": "Proscenio despejado",
+      "stage": "Ciclorama; termina con «¿Pensaron que se iban a salir con la suya?» y empieza a sonar la policía",
       "actors": "Preparar entradas laterales"
     },
     {
@@ -978,7 +978,7 @@
       "cue": "Cecilia entra preguntando por los ladrones",
       "sound": "Sirenas bajas",
       "lights": "Policía + seguidor móvil",
-      "stage": "Todo ocurre en proscenio y pasillos del público",
+      "stage": "Cerrar telón de boca; escena de Cecilia preguntando por los ladrones en el proscenio",
       "actors": "Cecilia entra izquierda; guardias acompañan"
     },
     {
@@ -986,8 +986,8 @@
       "num": "98",
       "block": "ESCENA 16 · CAPTURA",
       "cue": "Cecilia: «¡Que alguien me ilumine!»",
-      "sound": "Golpe de iluminación (opcional)",
-      "lights": "Spot blanco inmediato sobre Cecilia y zona de entrada",
+      "sound": "Tras el blackout sale la canción de los ladrones botando dinero",
+      "lights": "Spot blanco sobre Cecilia; en «¡Que alguien me ilumineee!» BLACKOUT",
       "stage": "Proscenio",
       "actors": "Armando, Cynthia, Lucho y Pata Pata listos"
     },
@@ -1018,7 +1018,7 @@
       "cue": "Cecilia ordena a Pata Pata levantar las manos",
       "sound": "",
       "lights": "Medio foco fucsia sobre Pata Pata",
-      "stage": "Proscenio; limpiar todos los billetes que quedaron botados",
+      "stage": "Proscenio",
       "actors": "Pata Pata realiza el gag de la cojera"
     },
     {
@@ -1047,8 +1047,8 @@
       "block": "ESCENA 16 · CAPTURA",
       "cue": "Cecilia: «Queda usted detenido»",
       "sound": "Sirena corta de salida",
-      "lights": "Blackout",
-      "stage": "Escuela directora debe quedar lista detrás del telón",
+      "lights": "Blackout hasta que limpien los billetes del escenario",
+      "stage": "Blackout: limpiar todos los billetes del escenario",
       "actors": "Todos quedan escoltados durante el oscuro"
     },
     {
@@ -1057,8 +1057,8 @@
       "block": "ESCENA 17 · KARIN Y PADRE JORGE",
       "cue": "Sube la luz después de la captura",
       "sound": "",
-      "lights": "Luz cálida de proscenio",
-      "stage": "Proscenio; Escuela directora en paz detrás",
+      "lights": "Luz cálida de escenario",
+      "stage": "Abrir telón mostrando el Escenario 2: escena de Karin y Padre Jorge",
       "actors": "Karin y Padre Jorge entran por la izquierda"
     },
     {
@@ -1068,7 +1068,7 @@
       "cue": "Padre: «Curiosidad y chisme, pecado doble»",
       "sound": "Sting cómico corto (opcional)",
       "lights": "Fade de salida",
-      "stage": "Proscenio",
+      "stage": "Escenario 2; al final salen de escena",
       "actors": "Salen los dos por la izquierda, cuchicheando"
     },
     {
@@ -1078,7 +1078,7 @@
       "cue": "Karin y Padre Jorge terminan de salir",
       "sound": "Video Cárcel · incluir puerta/celda cerrándose",
       "lights": "Escenario y sala oscuros",
-      "stage": "Pantalla/ciclorama",
+      "stage": "Bajar ciclorama para la proyección de los videos de la cárcel",
       "actors": "Video: Armando, Cynthia, Lucho, Pata Pata, Cecilia"
     },
     {
@@ -1088,7 +1088,7 @@
       "cue": "Termina el video de la cárcel",
       "sound": "Audio/video a negro",
       "lights": "Blackout de transición",
-      "stage": "Preparar proscenio",
+      "stage": "Ciclorama: video de la cárcel",
       "actors": "Padre Jorge listo a la derecha"
     },
     {
@@ -1098,7 +1098,7 @@
       "cue": "Padre Jorge: «¿Quién anda ahí?»",
       "sound": "Ambiente de suspenso corto (opcional)",
       "lights": "Luz de proscenio sobre Padre",
-      "stage": "Proscenio",
+      "stage": "Quitar el video; poner el fondo del patio con la iglesia",
       "actors": "Padre entra por la derecha"
     },
     {
@@ -1108,7 +1108,7 @@
       "cue": "Entra Sabel",
       "sound": "BOMBA · entrada; CONFIRMAR si se reemplaza por SEXY",
       "lights": "Ambiente rojo",
-      "stage": "Proscenio",
+      "stage": "Fondo: patio con la iglesia",
       "actors": "Sabel entra por la izquierda"
     },
     {
@@ -1118,7 +1118,7 @@
       "cue": "Aguafiestas: «Hola, padre. Y chao tú»",
       "sound": "Sonido celestial/hadas",
       "lights": "Azul de angelitos",
-      "stage": "Proscenio",
+      "stage": "Fondo: patio con la iglesia",
       "actors": "Aguafiestas y Aguafresca entran por la izquierda"
     },
     {
@@ -1128,7 +1128,7 @@
       "cue": "Angelitos sacan físicamente a Sabel",
       "sound": "Sonido de correr/forcejeo gracioso",
       "lights": "Azul gana sobre rojo",
-      "stage": "Proscenio",
+      "stage": "Fondo: patio con la iglesia",
       "actors": "Sabel sale empujada por la derecha"
     },
     {
@@ -1138,7 +1138,7 @@
       "cue": "Quedan Padre Jorge y los angelitos",
       "sound": "Fondo celestial suave (opcional)",
       "lights": "Azul/blanco estable",
-      "stage": "Proscenio",
+      "stage": "Fondo: patio con la iglesia",
       "actors": "Padre, Aguafiestas y Aguafresca"
     },
     {
@@ -1148,7 +1148,7 @@
       "cue": "Aguafresca lee: «Caso chocolate»",
       "sound": "Paso de página + sting cómico (opcional)",
       "lights": "Mantener",
-      "stage": "Proscenio",
+      "stage": "Fondo: patio con la iglesia",
       "actors": "Utilería: libro/expediente del Padre"
     },
     {
@@ -1158,7 +1158,7 @@
       "cue": "Padre: «Es hora de trabajar en el confesionario»",
       "sound": "",
       "lights": "Fade a blackout",
-      "stage": "Preparar proyección",
+      "stage": "Fondo: patio con la iglesia",
       "actors": "Padre sale derecha; angelitos salen izquierda"
     },
     {
@@ -1168,7 +1168,7 @@
       "cue": "Blackout completo",
       "sound": "Video del Padre hablando con los ladrones",
       "lights": "Escenario y sala oscuros",
-      "stage": "Pantalla/ciclorama",
+      "stage": "Ciclorama: video del Padre en la cárcel con los ladrones",
       "actors": "Video grabado"
     },
     {
@@ -1176,7 +1176,7 @@
       "num": "117",
       "block": "VIDEO · SEGUNDA OPORTUNIDAD",
       "cue": "Narración: «Una segunda oportunidad»",
-      "sound": "Final del video / fade out",
+      "sound": "Sin audio (se suprime el audio de los ladrones redimidos)",
       "lights": "Blackout de transición",
       "stage": "Preparar escena siguiente",
       "actors": ""
@@ -1188,8 +1188,8 @@
       "cue": "Karin y Paulita toman el centro",
       "sound": "",
       "lights": "Frontal completo",
-      "stage": "Abrir telón; escenario despejado",
-      "actors": "Karin y Paulita entran por la izquierda"
+      "stage": "Escena en proscenio con el telón de boca cerrado",
+      "actors": "Paula y Karin salen desde donde Yuri a hablar sobre Los Padrecitos"
     },
     {
       "id": 119,
@@ -1198,7 +1198,7 @@
       "cue": "Karin: «¡Con ustedes, Los Padrecitos!»",
       "sound": "Fanfarria/entrada de banda · POR CONFIRMAR",
       "lights": "Cambio a concierto",
-      "stage": "Micrófonos e instrumentos listos",
+      "stage": "«¡Con ustedes, Los Padrecitos!»: se abre el telón al Escenario 2 (todo despejado, solo el fondo de la escuela); queda abierto hasta la despedida",
       "actors": "Karin y Paulita salen izquierda; Los Padrecitos ocupan escena"
     },
     {
