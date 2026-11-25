@@ -163,12 +163,12 @@ export function TheaterPath() {
 
             <p className="text-3xl leading-tight font-bold text-balance lg:text-5xl">{cue.cue}</p>
 
-            {view === "stage" ? (
+            {view === "stage" || view === "all" ? (
               <div className="flex min-h-0 flex-1 gap-4">
                 <StagePlan plan={planOf(index)} className="min-h-0 min-w-0 flex-1 self-stretch" />
-                <div className="flex w-[34%] max-w-sm shrink-0 flex-col gap-2 overflow-y-auto">
+                <div className={cn("flex shrink-0 flex-col gap-2 overflow-y-auto", view === "all" ? "w-[42%]" : "w-[34%] max-w-sm")}>
                   {shown.map(({ dept, state }) => (
-                    <StageHint key={dept.key} dept={dept} state={state} />
+                    <StageHint key={dept.key} dept={dept} state={state} compact={view === "all"} />
                   ))}
                 </div>
               </div>
@@ -195,7 +195,7 @@ export function TheaterPath() {
         <div className="flex h-16 items-center gap-1 rounded-full border border-white/10 bg-neutral-800/60 p-1.5" role="group" aria-label="Vista">
           {VIEWS.map((v) => (
             <RoleChip key={v.key} active={view === v.key} onClick={() => setView(v.key)}>
-              {v.depts.map((k) => {
+              {v.key !== "all" && v.depts.map((k) => {
                 const Icon = DEPT_ICON[k];
                 const d = DEPTS.find((x) => x.key === k)!;
                 return <Icon key={k} className={cn("size-5", view === v.key ? "" : d.accent)} />;
@@ -358,13 +358,21 @@ function UpNext({
 }
 
 /** Indicación de escenario en una línea, encima del plano. */
-function StageHint({ dept, state }: { dept: (typeof DEPTS)[number]; state: ReturnType<typeof deptState> }) {
+function StageHint({
+  dept,
+  state,
+  compact,
+}: {
+  dept: (typeof DEPTS)[number];
+  state: ReturnType<typeof deptState>;
+  compact?: boolean;
+}) {
   const Icon = DEPT_ICON[dept.key];
   const action = state.kind === "action";
   return (
-    <div className={cn("flex flex-1 items-start gap-3 rounded-2xl border p-4", action ? cn(dept.soft, dept.ring) : "border-white/10 bg-neutral-800/50")}>
+    <div className={cn("flex flex-1 items-start gap-3 rounded-2xl border", compact ? "p-3" : "p-4", action ? cn(dept.soft, dept.ring) : "border-white/10 bg-neutral-800/50")}>
       <Icon className={cn("mt-1 size-6 shrink-0", action ? dept.accent : "text-white/40")} />
-      <p className={cn("text-xl leading-snug", action ? "font-semibold text-white" : "text-white/45")}>
+      <p className={cn(compact ? "text-xl" : "text-2xl", "leading-snug", action ? "font-semibold text-white" : "text-white/45")}>
         {state.text || "Sin cambio"}
         {!action && <span className="ml-2 text-xs font-bold tracking-wide text-white/40 uppercase">Mantener</span>}
       </p>

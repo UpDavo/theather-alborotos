@@ -207,7 +207,7 @@ export type MicMap = Record<string, string>;
 
 /* ---------- Vistas: Sonido + Luces / Escenario ---------- */
 
-export type ViewKey = "show" | "stage";
+export type ViewKey = "show" | "stage" | "all";
 
 export interface ViewInfo {
   key: ViewKey;
@@ -218,6 +218,7 @@ export interface ViewInfo {
 export const VIEWS: ViewInfo[] = [
   { key: "show", label: "Sonido + Luces", depts: ["sound", "lights"] },
   { key: "stage", label: "Escenario", depts: ["stage"] },
+  { key: "all", label: "Todos", depts: ["sound", "lights", "stage"] },
 ];
 
 /* ---------- Qué hace cada actor ---------- */
