@@ -72,20 +72,20 @@ export function ActorsCard({
       {lines.length === 0 ? (
         <p className="text-sm text-white/40">Escenario vacío</p>
       ) : (
-        <ul className="flex flex-col gap-1.5">
+        <ul className="flex flex-1 flex-col gap-2">
           {lines.map(({ name, status, does }) => {
             const s = STATUS[status];
             return (
-              <li key={name} className={cn("flex flex-col gap-1 rounded-2xl border px-3 py-2", s.ring, status === "leave" && "opacity-70")}>
+              <li key={name} className={cn("flex max-h-48 flex-1 flex-col justify-center gap-1.5 rounded-2xl border px-4 py-3", s.ring, status === "leave" && "opacity-70")}>
                 <div className="flex items-center gap-2">
                   <button type="button" onClick={() => onEditMic?.(name)} className="active:scale-95" aria-label={`Micrófono de ${name}`}>
                     <Mic n={mics[name]} />
                   </button>
-                  <span className={cn("text-[15px] font-semibold", status === "leave" && "line-through")}>{name}</span>
-                  <span className={cn("ml-auto rounded-full px-2 py-0.5 text-[10px] font-bold uppercase", s.cls)}>{s.label}</span>
+                  <span className={cn("text-2xl font-bold", status === "leave" && "line-through")}>{name}</span>
+                  <span className={cn("ml-auto rounded-full px-2.5 py-0.5 text-xs font-bold uppercase", s.cls)}>{s.label}</span>
                 </div>
                 {does.map((d) => (
-                  <p key={d} className="text-sm leading-snug text-white/70">
+                  <p key={d} className="text-lg leading-snug text-white/80">
                     {d}
                   </p>
                 ))}

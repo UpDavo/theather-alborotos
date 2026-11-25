@@ -101,10 +101,10 @@ const KEYFRAMES: Record<string, Plan> = {
   "27": { telon: "cerrado", items: ESCUELA_DIRECTORA },
   "29": { telon: "abierto", items: ESCUELA_DIRECTORA },
   "30": { telon: "abierto", items: [...ESCUELA_DIRECTORA, ...RECAMARA] },
-  // Baja el ciclorama con la imagen del hospital (no telón).
-  "36": { telon: "ciclorama", items: [...ESCUELA_DIRECTORA, ...RECAMARA] },
+  // Baja el ciclorama con la imagen del hospital (no telón) y se despeja E1.
+  "36": { telon: "ciclorama", items: RECAMARA },
   // Ciclorama con proyección del hospital (no telón).
-  "37": { telon: "ciclorama", items: [...ESCUELA_DIRECTORA, ...RECAMARA] },
+  "37": { telon: "ciclorama", items: RECAMARA },
   "38": { telon: "ciclorama", items: RECAMARA },
   // Se levanta el ciclorama y al mismo tiempo se abre E2 (Recámara).
   "41": { telon: "abierto", e2: "abierto", items: RECAMARA },
